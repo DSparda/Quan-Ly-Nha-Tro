@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:context=".MainActivity">
+
+        <RadioGroup
+            android:id="@+id/radio_gr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_32"
+            android:layout_marginTop="@dimen/margin_top_48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radio_1"
+                style="@style/RadioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tang_mot" />
+
+            <LinearLayout
+                android:id="@+id/layout_tang_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top16"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <Button
+                    android:id="@+id/button_tang_1_1"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_101" />
+
+                <Button
+                    android:id="@+id/button_tang_1_2"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_102" />
+
+                <Button
+                    android:id="@+id/button_tang_1_3"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_103"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_1_4"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_104"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_1_5"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_105"></Button>
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/radio_2"
+                style="@style/RadioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start_32"
+                android:text="@string/tang_hai" />
+
+            <LinearLayout
+                android:id="@+id/layout_tang_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top16"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <Button
+                    android:id="@+id/button_tang_2_1"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_201"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_2_2"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_202"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_2_3"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_203"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_2_4"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_204"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_2_5"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_205"></Button>
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/radio_3"
+                style="@style/RadioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start_32"
+                android:fontFamily="@font/roboto"
+                android:text="@string/tang_ba" />
+
+            <LinearLayout
+                android:id="@+id/layout_tang_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top16"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <Button
+                    android:id="@+id/button_tang_3_1"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_301"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_3_2"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_302"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_3_3"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_303"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_3_4"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_304"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_3_5"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_305"></Button>
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/radio_4"
+                style="@style/RadioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start_32"
+                android:text="@string/tang_bon" />
+
+            <LinearLayout
+                android:id="@+id/layout_tang_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top16"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <Button
+                    android:id="@+id/button_tang_4_1"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_401"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_4_2"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_402"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_4_3"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_403"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_4_4"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_404"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_4_5"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_405"></Button>
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/radio_5"
+                style="@style/RadioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start_32"
+                android:text="@string/tang_nam" />
+
+            <LinearLayout
+                android:id="@+id/layout_tang_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top16"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <Button
+                    android:id="@+id/button_tang_5_1"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_501"></Button>
+
+                <Button
+                    android:id="@+id/button_tang_5_2"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    android:layout_width="@dimen/button_room_width"
+                    android:layout_height="@dimen/button_room_height"
+                    android:text="@string/name_502"></Button>
+
+            </LinearLayout>
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,12 +1,33 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="title_activity_login">Sign in</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="app_name">Quản Lý Nhà Trọ Trí Đức</string>
+    <string name="name_101">101</string>
+    <string name="name_102">102</string>
+    <string name="name_103">103</string>
+    <string name="name_104">104</string>
+    <string name="name_105">105</string>
+    <string name="name_201">201</string>
+    <string name="name_202">202</string>
+    <string name="name_203">203</string>
+    <string name="name_204">204</string>
+    <string name="name_205">205</string>
+    <string name="name_301">301</string>
+    <string name="name_302">302</string>
+    <string name="name_303">303</string>
+    <string name="name_304">304</string>
+    <string name="name_305">305</string>
+    <string name="name_401">401</string>
+    <string name="name_402">402</string>
+    <string name="name_403">403</string>
+    <string name="name_404">404</string>
+    <string name="name_405">405</string>
+    <string name="name_501">501</string>
+    <string name="name_502">502</string>
+    <string name="tang_mot">Tầng trọ 1</string>
+    <string name="tang_hai">Tầng trọ 2</string>
+    <string name="tang_ba">Tầng trọ 3</string>
+    <string name="tang_bon">Tầng trọ 4</string>
+    <string name="tang_nam">Tầng trọ 5</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
