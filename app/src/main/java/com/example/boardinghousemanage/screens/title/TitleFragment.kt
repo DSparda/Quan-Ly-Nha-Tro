@@ -38,32 +38,32 @@ class TitleFragment : Fragment() {
                         layoutTang5.visibility = View.GONE
                     }
                     radio2.id -> {
-                        layoutTang1.visibility = View.VISIBLE
-                        layoutTang2.visibility = View.GONE
+                        layoutTang1.visibility = View.GONE
+                        layoutTang2.visibility = View.VISIBLE
                         layoutTang3.visibility = View.GONE
                         layoutTang4.visibility = View.GONE
                         layoutTang5.visibility = View.GONE
                     }
-                    radio2.id -> {
-                        layoutTang1.visibility = View.VISIBLE
+                    radio3.id -> {
+                        layoutTang1.visibility = View.GONE
                         layoutTang2.visibility = View.GONE
-                        layoutTang3.visibility = View.GONE
+                        layoutTang3.visibility = View.VISIBLE
                         layoutTang4.visibility = View.GONE
                         layoutTang5.visibility = View.GONE
                     }
-                    radio2.id -> {
-                        layoutTang1.visibility = View.VISIBLE
+                    radio4.id -> {
+                        layoutTang1.visibility = View.GONE
                         layoutTang2.visibility = View.GONE
                         layoutTang3.visibility = View.GONE
-                        layoutTang4.visibility = View.GONE
+                        layoutTang4.visibility = View.VISIBLE
                         layoutTang5.visibility = View.GONE
                     }
-                    radio2.id -> {
-                        layoutTang1.visibility = View.VISIBLE
+                    radio5.id -> {
+                        layoutTang1.visibility = View.GONE
                         layoutTang2.visibility = View.GONE
                         layoutTang3.visibility = View.GONE
                         layoutTang4.visibility = View.GONE
-                        layoutTang5.visibility = View.GONE
+                        layoutTang5.visibility = View.VISIBLE
                     }
                 }
             }
