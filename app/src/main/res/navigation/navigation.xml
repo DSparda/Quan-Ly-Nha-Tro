@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/titleFragment"
-        android:name="com.example.boardinghousemanage.screens.TitleFragment"
+        android:name="com.example.boardinghousemanage.screens.title.TitleFragment"
         android:label="Quản Lý Nhà Trọ Trí Đức" />
 </navigation>

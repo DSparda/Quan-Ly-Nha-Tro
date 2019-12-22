@@ -1,4 +1,4 @@
-package com.example.boardinghousemanage.screens
+package com.example.boardinghousemanage.screens.title
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
