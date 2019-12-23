@@ -22,12 +22,21 @@
     <string name="name_405">405</string>
     <string name="name_501">501</string>
     <string name="name_502">502</string>
+
     <string name="tang_mot">Tầng trọ 1</string>
     <string name="tang_hai">Tầng trọ 2</string>
     <string name="tang_ba">Tầng trọ 3</string>
     <string name="tang_bon">Tầng trọ 4</string>
     <string name="tang_nam">Tầng trọ 5</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phong_thue">Phòng:</string>
+    <string name="songuoi_thue">Số người:</string>
+    <string name="soxe_thue">Số xe:</string>
+    <string name="sotiencoc_thue">Số tiền cọc:</string>
+    <string name="songuoi_hint">Nhập số người</string>
+    <string name="soxe_hint">Nhập số xe</string>
+    <string name="sotiencoc_hint">Nhập số tiền cọc</string>
+    <string name="button_xacnhan">Xác nhận</string>
+    <string name="button_huy">Hủy</string>
+
 </resources>

@@ -1,12 +1,14 @@
 package com.example.boardinghousemanage.screens.title
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import com.example.boardinghousemanage.R
 import com.example.boardinghousemanage.databinding.TitleFragmentBinding
 
@@ -26,9 +28,13 @@ class TitleFragment : Fragment() {
 
         viewModel = ViewModelProviders.of(this).get(TitleViewModel::class.java)
 
+        binding.titleViewModel = viewModel
+
+        binding.setLifecycleOwner(this)
+
         //Kiểm tra nút nào được check và xử lý
         binding.apply {
-            radioGr.setOnCheckedChangeListener { group, checkedId ->
+            radioGr.setOnCheckedChangeListener { _, checkedId ->
                 when (checkedId) {
                     radio1.id -> {
                         layoutTang1.visibility = View.VISIBLE
@@ -67,8 +73,18 @@ class TitleFragment : Fragment() {
                     }
                 }
             }
-
-            return binding.root
         }
+
+        viewModel.eventButton.observe(this, Observer { turnOn ->
+            if (turnOn) {
+                val maPhongClicked = viewModel.maPhong.value ?: 101
+                val action = TitleFragmentDirections.actionTitleToRent(maPhongClicked)
+                this.findNavController().navigate(action)
+                viewModel.onEventButtonComple()
+            }
+        })
+
+        return binding.root
     }
 }
+

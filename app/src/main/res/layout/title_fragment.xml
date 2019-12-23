@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="titleViewModel"
+            type="com.example.boardinghousemanage.screens.title.TitleViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,8 +18,8 @@
             android:id="@+id/radio_gr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_start_32"
-            android:layout_marginTop="@dimen/margin_top_48"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -38,14 +44,15 @@
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:text="@string/name_101" />
+                    android:text="@string/name_101"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"/>
 
                 <Button
                     android:id="@+id/button_tang_1_2"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:text="@string/name_102" />
+                    android:text="@string/name_102"/>
 
                 <Button
                     android:id="@+id/button_tang_1_3"
@@ -237,7 +244,7 @@
                 android:layout_marginTop="@dimen/margin_start_32"
                 android:text="@string/tang_nam" />
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_tang_5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -251,16 +258,28 @@
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:text="@string/name_501" />
+                    android:layout_marginStart="64dp"
+                    android:text="@string/name_501"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button_tang_5_2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button_tang_5_2"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:text="@string/name_502" />
+                    android:layout_marginEnd="64dp"
+                    android:text="@string/name_502"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_tang_5_1"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

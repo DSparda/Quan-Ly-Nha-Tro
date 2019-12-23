@@ -11,6 +11,7 @@
     <style name="RadioStyle">
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textSize">30sp</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
 </resources>
