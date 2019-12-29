@@ -20,5 +20,9 @@
         <argument
             android:name="maPhongKey"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_rent_to_title"
+            app:destination="@id/titleFragment"
+            app:popUpTo="@+id/titleFragment" />
     </fragment>
 </navigation>

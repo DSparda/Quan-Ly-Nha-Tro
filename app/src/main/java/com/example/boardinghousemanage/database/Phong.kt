@@ -6,15 +6,15 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "phong_table")
 data class Phong (
-    @PrimaryKey(autoGenerate = true)
-    var MaPhong: Long = 0L,
+    @PrimaryKey
+    var MaPhong: Int?,
 
     @ColumnInfo(name = "so_nguoi")
-    var SoNguoi:Long,
+    var SoNguoi:Int?,
 
     @ColumnInfo(name = "so_xe")
-    var SoXe: Long,
+    var SoXe: Int?,
 
     @ColumnInfo(name = "so_tien_coc")
-    var SoTienCoc: Long
+    var SoTienCoc: Int?
 )

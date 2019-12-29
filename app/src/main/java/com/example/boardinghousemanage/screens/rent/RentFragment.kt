@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.boardinghousemanage.R
 import com.example.boardinghousemanage.database.TroDatabase
@@ -38,6 +40,28 @@ class RentFragment : Fragment() {
         binding.rentViewModel = viewModel
         binding.setLifecycleOwner(this)
 
+        fun passEditValue() {
+            binding.apply {
+                viewModel._songuoi.value = songuoiEdit.text.toString().toInt()
+                viewModel._soxe.value = songuoiEdit.text.toString().toInt()
+                viewModel._sotiencoc.value = sotiencocEdit.text.toString().toInt()
+
+            }
+        }
+
+        viewModel.eventInsert.observe(this, Observer { InsertTrigger ->
+            if (InsertTrigger) {
+                passEditValue()
+                viewModel.onEventInsertComple()
+            }
+        })
+
+        viewModel.navigateToTitle.observe(this, Observer { cancel ->
+            if (cancel) {
+                this.findNavController().navigate(RentFragmentDirections.actionRentToTitle())
+                viewModel.doneToTitle()
+            }
+        })
         return binding.root
     }
 }
