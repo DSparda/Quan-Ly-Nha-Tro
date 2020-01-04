@@ -29,56 +29,65 @@
                 style="@style/RadioStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> titleViewModel.radio1Checked()}"
                 android:text="@string/tang_mot" />
 
             <LinearLayout
                 android:id="@+id/layout_tang_1"
+                style="?android:buttonBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/margin_top16"
                 android:orientation="horizontal"
-                android:visibility="gone"
+                android:visibility="@{titleViewModel.layoutChecked1}"
                 tools:visibility="visible">
 
                 <Button
                     android:id="@+id/button_tang_1_1"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
+                    android:background="@{titleViewModel.p101Color}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_101" />
+                    android:text="@string/name_101"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_1_2"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_102" />
+                    android:text="@string/name_102"
+                    android:textColor="@color/Black"
+                    android:background="@{titleViewModel.mapColor(titleViewModel.p102State)}"/>
 
                 <Button
                     android:id="@+id/button_tang_1_3"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_103" />
+                    android:text="@string/name_103"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_1_4"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_104" />
+                    android:text="@string/name_104"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_1_5"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_105" />
+                    android:text="@string/name_105"
+                    android:textColor="@color/Black" />
             </LinearLayout>
 
             <RadioButton
@@ -87,56 +96,63 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_start_32"
+                android:onClick="@{() -> titleViewModel.radio2Checked()}"
                 android:text="@string/tang_hai" />
 
             <LinearLayout
                 android:id="@+id/layout_tang_2"
+                style="?android:buttonBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/margin_top16"
                 android:orientation="horizontal"
-                android:visibility="gone"
+                android:visibility="@{titleViewModel.layoutChecked2}"
                 tools:visibility="visible">
 
                 <Button
                     android:id="@+id/button_tang_2_1"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_201" />
+                    android:text="@string/name_201"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_2_2"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_202" />
+                    android:text="@string/name_202"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_2_3"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_203" />
+                    android:text="@string/name_203"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_2_4"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_204" />
+                    android:text="@string/name_204"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_2_5"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_205" />
+                    android:text="@string/name_205"
+                    android:textColor="@color/Black" />
             </LinearLayout>
 
             <RadioButton
@@ -146,56 +162,63 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_start_32"
                 android:fontFamily="@font/roboto"
+                android:onClick="@{() -> titleViewModel.radio3Checked()}"
                 android:text="@string/tang_ba" />
 
             <LinearLayout
                 android:id="@+id/layout_tang_3"
+                style="?android:buttonBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/margin_top16"
                 android:orientation="horizontal"
-                android:visibility="gone"
+                android:visibility="@{titleViewModel.layoutChecked3}"
                 tools:visibility="visible">
 
                 <Button
                     android:id="@+id/button_tang_3_1"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_301" />
+                    android:text="@string/name_301"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_3_2"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_302" />
+                    android:text="@string/name_302"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_3_3"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_303" />
+                    android:text="@string/name_303"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_3_4"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_304" />
+                    android:text="@string/name_304"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_3_5"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_305" />
+                    android:text="@string/name_305"
+                    android:textColor="@color/Black" />
             </LinearLayout>
 
             <RadioButton
@@ -204,56 +227,63 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_start_32"
+                android:onClick="@{() -> titleViewModel.radio4Checked()}"
                 android:text="@string/tang_bon" />
 
             <LinearLayout
                 android:id="@+id/layout_tang_4"
+                style="?android:buttonBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/margin_top16"
                 android:orientation="horizontal"
-                android:visibility="gone"
+                android:visibility="@{titleViewModel.layoutChecked4}"
                 tools:visibility="visible">
 
                 <Button
                     android:id="@+id/button_tang_4_1"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_401" />
+                    android:text="@string/name_401"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_4_2"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_402" />
+                    android:text="@string/name_402"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_4_3"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_403" />
+                    android:text="@string/name_403"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_4_4"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_404" />
+                    android:text="@string/name_404"
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_4_5"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_405" />
+                    android:text="@string/name_405"
+                    android:textColor="@color/Black" />
             </LinearLayout>
 
             <RadioButton
@@ -262,25 +292,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_start_32"
+                android:onClick="@{() -> titleViewModel.radio5Checked()}"
                 android:text="@string/tang_nam" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_tang_5"
+                style="?android:buttonBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/margin_top16"
                 android:orientation="horizontal"
-                android:visibility="gone"
+                android:visibility="@{titleViewModel.layoutChecked5}"
                 tools:visibility="visible">
 
                 <Button
                     android:id="@+id/button_tang_5_1"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:layout_marginStart="64dp"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
                     android:text="@string/name_501"
+                    android:textColor="@color/Black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/button_tang_5_2"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -289,12 +322,13 @@
 
                 <Button
                     android:id="@+id/button_tang_5_2"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:layout_marginEnd="64dp"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
                     android:text="@string/name_502"
+                    android:textColor="@color/Black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"

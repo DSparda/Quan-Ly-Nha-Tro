@@ -26,15 +26,16 @@ class RentFragment : Fragment() {
     ): View {
 
         val binding: RentFragmentBinding = DataBindingUtil.inflate(
-            inflater, R.layout.rent_fragment, container, false)
+            inflater, R.layout.rent_fragment, container, false
+        )
 
         val application = requireNotNull(this.activity).application
-
         val dataSource = TroDatabase.getInstance(application).phongDao
 
         val rentFragmentArgs by navArgs<RentFragmentArgs>()
 
-        viewModelFactory = RentViewModelFactory(rentFragmentArgs.maPhongKey, dataSource, application)
+        viewModelFactory =
+            RentViewModelFactory(rentFragmentArgs.maPhongKey, dataSource, application)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(RentViewModel::class.java)
 
         binding.rentViewModel = viewModel
@@ -52,12 +53,12 @@ class RentFragment : Fragment() {
         viewModel.eventInsert.observe(this, Observer { InsertTrigger ->
             if (InsertTrigger) {
                 passEditValue()
-                viewModel.onEventInsertComple()
+                viewModel.doneInsert()
             }
         })
 
-        viewModel.navigateToTitle.observe(this, Observer { cancel ->
-            if (cancel) {
+        viewModel.navigateToTitle.observe(this, Observer { event ->
+            if (event) {
                 this.findNavController().navigate(RentFragmentDirections.actionRentToTitle())
                 viewModel.doneToTitle()
             }

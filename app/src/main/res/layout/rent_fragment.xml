@@ -14,63 +14,64 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/sotiencoc_edit"
+            android:id="@+id/tienxe_edit"
             style="@style/EditTextStyle"
             android:layout_width="120dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginStart="32dp"
             android:ems="10"
-            android:hint="@string/sotiencoc_hint"
+            android:hint="@string/hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:textSize="15sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/sotiencoc_text"
-            app:layout_constraintStart_toEndOf="@+id/sotiencoc_text" />
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tienxe_text"
+            app:layout_constraintStart_toEndOf="@+id/tienxe_text" />
 
         <EditText
-            android:id="@+id/soxe_edit"
+            android:id="@+id/dien_edit"
             style="@style/EditTextStyle"
             android:layout_width="120dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginStart="32dp"
             android:ems="10"
-            android:hint="@string/soxe_hint"
+            android:hint="@string/hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:textSize="15sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/soxe_text"
-            app:layout_constraintStart_toEndOf="@+id/sotiencoc_text" />
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/dien_text"
+            app:layout_constraintStart_toEndOf="@+id/tienxe_text" />
 
         <TextView
             android:id="@+id/phong_edit"
             style="@style/EditTextStyle"
-            android:layout_width="145dp"
-            android:layout_height="37dp"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
             android:layout_marginStart="32dp"
             android:text="@{rentViewModel.maPhongString}"
             app:layout_constraintBaseline_toBaselineOf="@+id/phong_text"
-            app:layout_constraintStart_toEndOf="@+id/sotiencoc_text" />
+            app:layout_constraintStart_toEndOf="@+id/tienxe_text" />
 
         <EditText
-            android:id="@+id/songuoi_edit"
-            android:layout_marginStart="32dp"
-            android:hint="@string/songuoi_hint"
-            app:layout_constraintBaseline_toBaselineOf="@+id/songuoi_text"
-            app:layout_constraintStart_toEndOf="@+id/sotiencoc_text"
+            android:id="@+id/thoigian_edit"
             style="@style/EditTextStyle"
-            android:importantForAutofill="no" />
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:hint="@string/hint"
+            android:importantForAutofill="no"
+            app:layout_constraintBaseline_toBaselineOf="@+id/thoigian_text"
+            app:layout_constraintStart_toEndOf="@+id/tienxe_text" />
 
         <TextView
-            android:id="@+id/soxe_text"
+            android:id="@+id/dien_text"
             style="@style/RadioStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="@dimen/margin_top16"
             android:text="@string/soxe_thue"
-            app:layout_constraintBottom_toTopOf="@+id/sotiencoc_text"
+            app:layout_constraintBottom_toTopOf="@+id/tienxe_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/songuoi_text" />
+            app:layout_constraintTop_toBottomOf="@+id/thoigian_text" />
 
         <TextView
             android:id="@+id/phong_text"
@@ -80,26 +81,26 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:text="@string/phong_thue"
-            app:layout_constraintBottom_toTopOf="@+id/songuoi_text"
+            app:layout_constraintBottom_toTopOf="@+id/thoigian_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
-            android:id="@+id/songuoi_text"
+            android:id="@+id/thoigian_text"
             style="@style/RadioStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="@dimen/margin_top16"
             android:text="@string/songuoi_thue"
-            app:layout_constraintBottom_toTopOf="@+id/soxe_text"
+            app:layout_constraintBottom_toTopOf="@+id/dien_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phong_text" />
 
         <TextView
-            android:id="@+id/sotiencoc_text"
+            android:id="@+id/tienxe_text"
             style="@style/RadioStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -108,7 +109,7 @@
             android:text="@string/sotiencoc_thue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/soxe_text" />
+            app:layout_constraintTop_toBottomOf="@+id/dien_text" />
 
         <Button
             android:id="@+id/button_xacnhan"

@@ -16,32 +16,9 @@ class RentViewModel(
 
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    private suspend fun insert(phong: Phong) {
-        withContext(Dispatchers.IO) {
-            database.insert(phong)
-        }
-    }
-
     val _songuoi = MutableLiveData<Int>()
     val _soxe = MutableLiveData<Int>()
     val _sotiencoc = MutableLiveData<Int>()
-
-    fun onXacNhan() {
-        _eventInsert.value = true
-        uiScope.launch {
-            val newRoom = Phong(_maPhong.value, _songuoi.value, _soxe.value, _sotiencoc.value)
-            insert(newRoom)
-            _navigateToTitle.value = true
-        }
-    }
-
-    private val _eventInsert = MutableLiveData<Boolean>()
-    val eventInsert: LiveData<Boolean>
-        get() = _eventInsert
-
-    private val _navigateToTitle = MutableLiveData<Boolean>()
-    val navigateToTitle: LiveData<Boolean>
-        get() =  _navigateToTitle
 
     private val _maPhong = MutableLiveData<Int>()
     val maPhong: LiveData<Int>
@@ -50,11 +27,34 @@ class RentViewModel(
         key.toString()
     }
 
+    private val _eventInsert = MutableLiveData<Boolean>()
+    val eventInsert: LiveData<Boolean>
+        get() = _eventInsert
+
+    private val _navigateToTitle = MutableLiveData<Boolean>()
+    val navigateToTitle: LiveData<Boolean>
+        get() = _navigateToTitle
+
     init {
         _maPhong.value = MaPhong
     }
 
-    fun onEventInsertComple() {
+    fun onXacNhan() {
+        uiScope.launch {
+            _eventInsert.value = true
+            val newRoom = Phong(_maPhong.value!!, _songuoi.value, _soxe.value, _sotiencoc.value, 1)
+            insert(newRoom)
+            _navigateToTitle.value = true
+        }
+    }
+
+    private suspend fun insert(phong: Phong) {
+        withContext(Dispatchers.IO) {
+            database.insert(phong)
+        }
+    }
+
+    fun doneInsert() {
         _eventInsert.value = false
     }
 

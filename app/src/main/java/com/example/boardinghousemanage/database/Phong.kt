@@ -1,5 +1,6 @@
 package com.example.boardinghousemanage.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -7,7 +8,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "phong_table")
 data class Phong (
     @PrimaryKey
-    var MaPhong: Int?,
+    var MaPhong: Int,
 
     @ColumnInfo(name = "so_nguoi")
     var SoNguoi:Int?,
@@ -16,5 +17,8 @@ data class Phong (
     var SoXe: Int?,
 
     @ColumnInfo(name = "so_tien_coc")
-    var SoTienCoc: Int?
+    var SoTienCoc: Int?,
+
+    @ColumnInfo(name = "tinh_trang")
+    var TinhTrang: Int?
 )

@@ -1,19 +1,17 @@
 package com.example.boardinghousemanage.database
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Update
+import androidx.lifecycle.LiveData
+import androidx.room.*
 
 @Dao
 interface PhongDao {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.ABORT)
     fun insert(phong: Phong)
 
     @Update
     fun update(phong: Phong)
 
-    @Delete
-    fun delete(phong: Phong)
+    @Query ("SELECT IFNULL (tinh_trang,0) FROM phong_table WHERE MaPhong = :key")
+    fun getState(key: Int): LiveData<Int>
 }
