@@ -47,7 +47,6 @@
                     style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.p101Color}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
                     android:text="@string/name_101"
                     android:textColor="@color/Black" />
@@ -57,10 +56,11 @@
                     style='style="?android:attr/buttonBarButtonStyle"'
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
+                    android:background="@{titleViewModel.mapColor(titleViewModel.p102State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p102State)}"
                     android:text="@string/name_102"
-                    android:textColor="@color/Black"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p102State)}"/>
+                    android:textColor="@color/Black" />
 
                 <Button
                     android:id="@+id/button_tang_1_3"

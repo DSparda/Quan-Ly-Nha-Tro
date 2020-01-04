@@ -43,9 +43,9 @@ class RentFragment : Fragment() {
 
         fun passEditValue() {
             binding.apply {
-                viewModel._songuoi.value = songuoiEdit.text.toString().toInt()
-                viewModel._soxe.value = songuoiEdit.text.toString().toInt()
-                viewModel._sotiencoc.value = sotiencocEdit.text.toString().toInt()
+                viewModel._songuoi.value = songuoiEditRen.text.toString().toInt()
+                viewModel._soxe.value = soxeEditRen.text.toString().toInt()
+                viewModel._sotiencoc.value = sotiencocEditRen.text.toString().toInt()
 
             }
         }

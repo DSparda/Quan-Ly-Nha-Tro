@@ -33,10 +33,21 @@
     <string name="songuoi_thue">Số người:</string>
     <string name="soxe_thue">Số xe:</string>
     <string name="sotiencoc_thue">Số tiền cọc:</string>
-    <string name="songuoi_hint">Nhập số người</string>
-    <string name="soxe_hint">Nhập số xe</string>
-    <string name="sotiencoc_hint">Nhập số tiền cọc</string>
+    <string name="hint">Nhập</string>
     <string name="button_xacnhan">Xác nhận</string>
     <string name="button_huy">Hủy</string>
+
+    <string name="thu_phi">Thu phí phòng</string>
+    <string name="tra_phong">Trả phòng</string>
+    <string name="cap_nhat">Cập nhật phòng</string>
+
+    <string name="thoi_gian">Thời gian</string>
+    <string name="ki_dien">Số kí điện:</string>
+    <string name="tien_phong">Tiền phòng:</string>
+    <string name="tien_net">Tiền Internet:</string>
+    <string name="tien_rac">Tiền rác</string>
+    <string name="tong">Tổng:</string>
+    <string name="tien_xe">Tiền xe</string>
+    <string name="tien_nuoc">Tiền nước:</string>
 
 </resources>

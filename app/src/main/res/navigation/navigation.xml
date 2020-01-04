@@ -7,22 +7,34 @@
     <fragment
         android:id="@+id/titleFragment"
         android:name="com.example.boardinghousemanage.screens.title.TitleFragment"
-        android:label="Sao vậy ta">
+        android:label="TitleFragment">
         <action
             android:id="@+id/action_title_to_rent"
             app:destination="@id/rentFragment"
+            app:popUpTo="@+id/titleFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_generalFragment"
+            app:destination="@id/generalFragment"
             app:popUpTo="@+id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/rentFragment"
         android:name="com.example.boardinghousemanage.screens.rent.RentFragment"
-        android:label="Cho Thuê Phòng">
+        android:label="RentFragment">
         <argument
             android:name="maPhongKey"
             app:argType="integer" />
         <action
             android:id="@+id/action_rent_to_title"
             app:destination="@id/titleFragment"
-            app:popUpTo="@+id/titleFragment" />
+            app:popUpTo="@+id/rentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalFragment"
+        android:name="com.example.boardinghousemanage.screens.general.GeneralFragment"
+        android:label="GeneralFragment" >
+        <argument
+            android:name="maPhongKey"
+            app:argType="integer" />
     </fragment>
 </navigation>

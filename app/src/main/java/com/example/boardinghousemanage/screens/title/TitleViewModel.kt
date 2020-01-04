@@ -2,7 +2,6 @@ package com.example.boardinghousemanage.screens.title
 
 import android.app.Application
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.Button
@@ -11,9 +10,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import com.example.boardinghousemanage.R
-import com.example.boardinghousemanage.R.color
-import com.example.boardinghousemanage.database.Phong
 import com.example.boardinghousemanage.database.PhongDao
 import kotlinx.coroutines.*
 
@@ -45,15 +41,19 @@ class TitleViewModel(
     val p501State = database.getState(501)
     val p502State = database.getState(502)
 
-    fun mapColor(p: Int): Drawable {
-        return when (p) {
+    fun mapColor(p: Int): Drawable =
+        when (p) {
             1 -> Color.YELLOW.toDrawable()
             2 -> Color.GREEN.toDrawable()
             3 -> Color.RED.toDrawable()
             else -> Color.GRAY.toDrawable()
         }
-    }
 
+    fun mapTag(p: Int): Int =
+        when (p) {
+            0 -> 0
+            else -> 1
+        }
 
     //region Xử lí radioButton check
     private val _radioChecked = MutableLiveData<Int>()
@@ -114,17 +114,20 @@ class TitleViewModel(
 
     private val _maPhong = MutableLiveData<Int>()
     val maPhong: LiveData<Int>
-        get()= _maPhong
+        get() = _maPhong
 
     private val _check = MutableLiveData<Int>()
-    lateinit var check: LiveData<Int>
+    val check: LiveData<Int>
         get() = _check
+
     fun onEventButton(v: View) {
         val b: Button = v as Button
         _maPhong.value = b.text.toString().toInt()
-        check = database.getState(_maPhong.value!!)
+        when (b.tag) {
+            0 -> _check.value = 0
+            1 -> _check.value = 1
+        }
     }
-
 
     fun doneNavigate() {
         _check.value = -1

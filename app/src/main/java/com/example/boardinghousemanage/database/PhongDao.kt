@@ -13,5 +13,5 @@ interface PhongDao {
     fun update(phong: Phong)
 
     @Query ("SELECT IFNULL (tinh_trang,0) FROM phong_table WHERE MaPhong = :key")
-    fun getState(key: Int): LiveData<Int>
+    fun getState(key: Int?): LiveData<Int>
 }

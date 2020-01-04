@@ -41,11 +41,17 @@ class TitleFragment : Fragment() {
         binding.setLifecycleOwner(this)
 
         viewModel.check.observe(this, Observer { check ->
-            val actionToRent = TitleFragmentDirections.actionTitleToRent(viewModel.maPhong.value!!)
             when (check) {
-
-                this.findNavController().navigate(action)
-                viewModel.doneToRent()
+                0 -> {
+                    this.findNavController()
+                        .navigate(TitleFragmentDirections.actionTitleToRent(viewModel.maPhong.value!!))
+                    viewModel.doneNavigate()
+                }
+                1 -> {
+                    this.findNavController()
+                        .navigate(TitleFragmentDirections.actionTitleFragmentToGeneralFragment(viewModel.maPhong.value!!))
+                    viewModel.doneNavigate()
+                }
             }
         })
 
