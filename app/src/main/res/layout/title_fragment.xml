@@ -62,33 +62,33 @@
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_103" />
-                    android:text="@string/name_103"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p103State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_103"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_1_4"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_104" />
-                    android:text="@string/name_104"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p104State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_104"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_1_5"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_105" />
-                    android:text="@string/name_105"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p105State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_105"
                     android:textColor="@color/Black" />
+
             </LinearLayout>
 
             <RadioButton
@@ -113,55 +113,55 @@
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_201" />
-                    android:text="@string/name_201"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p201State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_201"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_2_2"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_202" />
-                    android:text="@string/name_202"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p202State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_202"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_2_3"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_203" />
-                    android:text="@string/name_203"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p203State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_203"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_2_4"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_204" />
-                    android:text="@string/name_204"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p204State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_204"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_2_5"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_205" />
-                    android:text="@string/name_205"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p205State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_205"
                     android:textColor="@color/Black" />
+
             </LinearLayout>
 
             <RadioButton
@@ -187,10 +187,9 @@
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_301" />
-                    android:text="@string/name_301"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p301State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_301"
                     android:textColor="@color/Black" />
 
                 <Button
@@ -198,32 +197,31 @@
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_302" />
-                    android:text="@string/name_302"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p302State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_302"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_3_3"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_303" />
-                    android:text="@string/name_303"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p303State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_303"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_3_4"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_304" />
-                    android:text="@string/name_304"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p304State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_304"
                     android:textColor="@color/Black" />
 
                 <Button
@@ -231,11 +229,11 @@
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_305" />
-                    android:text="@string/name_305"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p305State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_305"
                     android:textColor="@color/Black" />
+
             </LinearLayout>
 
             <RadioButton
@@ -260,55 +258,55 @@
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_401" />
-                    android:text="@string/name_401"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p401State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_401"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_4_2"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_402" />
-                    android:text="@string/name_402"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p402State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_402"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_4_3"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_403" />
-                    android:text="@string/name_403"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p403State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_403"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_4_4"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_404" />
-                    android:text="@string/name_404"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p404State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_404"
                     android:textColor="@color/Black" />
+
 
                 <Button
                     android:id="@+id/button_tang_4_5"
                     style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:text="@string/name_405" />
-                    android:text="@string/name_405"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p405State)}"
+                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:text="@string/name_405"
                     android:textColor="@color/Black" />
+
             </LinearLayout>
 
             <RadioButton
@@ -334,9 +332,9 @@
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:layout_marginStart="64dp"
+                    android:background="@{titleViewModel.mapColor(titleViewModel.p501State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
                     android:text="@string/name_501"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p501State)}"
                     android:textColor="@color/Black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/button_tang_5_2"
@@ -350,9 +348,9 @@
                     android:layout_width="@dimen/button_room_width"
                     android:layout_height="@dimen/button_room_height"
                     android:layout_marginEnd="64dp"
+                    android:background="@{titleViewModel.mapColor(titleViewModel.p502State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
                     android:text="@string/name_502"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p502State)}"
                     android:textColor="@color/Black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
