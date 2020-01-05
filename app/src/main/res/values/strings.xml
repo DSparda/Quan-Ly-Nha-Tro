@@ -45,9 +45,14 @@
     <string name="ki_dien">Số kí điện:</string>
     <string name="tien_phong">Tiền phòng:</string>
     <string name="tien_net">Tiền Internet:</string>
-    <string name="tien_rac">Tiền rác</string>
+    <string name="tien_rac">Tiền rác:</string>
     <string name="tong">Tổng:</string>
     <string name="tien_xe">Tiền xe</string>
     <string name="tien_nuoc">Tiền nước:</string>
+
+    <string name="don_gia_dien">Tiền/ kWh Điện:</string>
+    <string name="don_gia_nuoc">Tiền nước/ Người:</string>
+    <string name="dg_xe">Tiền xe/ xe:</string>
+    <string name="menu_item">Cập nhật đơn giá</string>
 
 </resources>

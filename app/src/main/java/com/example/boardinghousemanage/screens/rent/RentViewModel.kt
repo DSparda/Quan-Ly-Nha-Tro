@@ -27,10 +27,6 @@ class RentViewModel(
         key.toString()
     }
 
-    private val _eventInsert = MutableLiveData<Boolean>()
-    val eventInsert: LiveData<Boolean>
-        get() = _eventInsert
-
     private val _navigateToTitle = MutableLiveData<Boolean>()
     val navigateToTitle: LiveData<Boolean>
         get() = _navigateToTitle
@@ -41,8 +37,7 @@ class RentViewModel(
 
     fun onXacNhan() {
         uiScope.launch {
-            _eventInsert.value = true
-            val newRoom = Phong(_maPhong.value!!, _songuoi.value, _soxe.value, _sotiencoc.value, 1)
+            val newRoom = Phong(_maPhong.value!!, _songuoi.value!!, _soxe.value!!, _sotiencoc.value!!, 1)
             insert(newRoom)
             _navigateToTitle.value = true
         }
@@ -52,10 +47,6 @@ class RentViewModel(
         withContext(Dispatchers.IO) {
             database.insert(phong)
         }
-    }
-
-    fun doneInsert() {
-        _eventInsert.value = false
     }
 
     fun onHuy() {

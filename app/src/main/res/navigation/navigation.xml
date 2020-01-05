@@ -27,7 +27,7 @@
         <action
             android:id="@+id/action_rent_to_title"
             app:destination="@id/titleFragment"
-            app:popUpTo="@+id/rentFragment" />
+            app:popUpTo="@+id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/generalFragment"
@@ -36,5 +36,14 @@
         <argument
             android:name="maPhongKey"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/parameterFragment"
+        android:name="com.example.boardinghousemanage.screens.parameter.ParameterFragment"
+        android:label="ParameterFragment" >
+        <action
+            android:id="@+id/action_parameterFragment_to_titleFragment"
+            app:destination="@id/titleFragment"
+            app:popUpTo="@+id/parameterFragment" />
     </fragment>
 </navigation>

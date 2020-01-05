@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -41,28 +42,24 @@ class RentFragment : Fragment() {
         binding.rentViewModel = viewModel
         binding.setLifecycleOwner(this)
 
-        fun passEditValue() {
-            binding.apply {
-                viewModel._songuoi.value = songuoiEditRen.text.toString().toInt()
-                viewModel._soxe.value = soxeEditRen.text.toString().toInt()
-                viewModel._sotiencoc.value = sotiencocEditRen.text.toString().toInt()
-
-            }
-        }
-
-        viewModel.eventInsert.observe(this, Observer { InsertTrigger ->
-            if (InsertTrigger) {
-                passEditValue()
-                viewModel.doneInsert()
-            }
-        })
-
         viewModel.navigateToTitle.observe(this, Observer { event ->
             if (event) {
                 this.findNavController().navigate(RentFragmentDirections.actionRentToTitle())
                 viewModel.doneToTitle()
             }
         })
+
+        binding.apply {
+            songuoiEditRen.doOnTextChanged { text, start, count, after ->
+                viewModel._songuoi.value = text.toString().toInt()
+            }
+            soxeEditRen.doOnTextChanged { text, start, count, after ->
+                viewModel._soxe.value = text.toString().toInt()
+            }
+            sotiencocEditRen.doOnTextChanged { text, start, count, after ->
+                viewModel._sotiencoc.value = text.toString().toInt()
+            }
+        }
         return binding.root
     }
 }
