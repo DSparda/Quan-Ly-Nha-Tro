@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="generalViewModel"
             type="com.example.boardinghousemanage.screens.general.GeneralViewModel" />
@@ -27,9 +28,8 @@
                 style="@style/RadioStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/thu_phi"
                 android:onClick="@{() -> generalViewModel.radio1Checked()}"
-                />
+                android:text="@string/thu_phi" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_thu_phi"
@@ -152,6 +152,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
+                    android:text="@{generalViewModel.maPhongString}"
                     android:textSize="15sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/phong_text_gen"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -176,7 +177,6 @@
                     android:ems="10"
                     android:hint="@string/hint"
                     android:importantForAutofill="no"
-                    android:inputType="textPersonName"
                     android:textSize="13sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/dien_text_gen"
                     app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
@@ -188,6 +188,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="16dp"
                     android:textSize="15sp"
+                    android:text="@{generalViewModel.tienNuocString}"
                     app:layout_constraintBaseline_toBaselineOf="@+id/nuoc_text_gen"
                     app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
 
@@ -198,6 +199,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="16dp"
                     android:textSize="15sp"
+                    android:text="@{generalViewModel.tienPhongString}"
                     app:layout_constraintBaseline_toBaselineOf="@+id/tienphong_text_gen"
                     app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
 
@@ -208,6 +210,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="16dp"
                     android:textSize="15sp"
+                    android:text="@{generalViewModel.tienXeString}"
                     app:layout_constraintBaseline_toBaselineOf="@+id/tienxe_text_gen"
                     app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
 
@@ -218,6 +221,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="16dp"
                     android:textSize="15sp"
+                    android:text="@{generalViewModel.tienNetString}"
                     app:layout_constraintBaseline_toBaselineOf="@+id/tiennet_gen_text"
                     app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
 
@@ -228,6 +232,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="16dp"
                     android:textSize="15sp"
+                    android:text="@{generalViewModel.tienRacString}"
                     app:layout_constraintBaseline_toBaselineOf="@+id/tienrac_text_gen"
                     app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
 
@@ -238,6 +243,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="16dp"
                     android:textSize="15sp"
+                    android:text="@{generalViewModel.tienTongString}"
                     app:layout_constraintBaseline_toBaselineOf="@+id/tientong_text_gen"
                     app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
 
@@ -272,9 +278,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="@string/tra_phong"
                 android:onClick="@{() -> generalViewModel.radio2Checked()}"
-                />
+                android:text="@string/tra_phong" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_tra_phong"
@@ -316,9 +321,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="@string/cap_nhat"
                 android:onClick="@{() -> generalViewModel.radio3Checked()}"
-                />
+                android:text="@string/cap_nhat" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_cap_nhat"
@@ -377,6 +381,7 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
+                    android:text="@{generalViewModel.maPhongString}"
                     app:layout_constraintBaseline_toBaselineOf="@+id/phong_text_gen2"
                     app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
 
@@ -389,7 +394,6 @@
                     android:ems="10"
                     android:hint="@string/hint"
                     android:importantForAutofill="no"
-                    android:inputType="textPersonName"
                     android:textSize="13sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/songuoi_text_gen2"
                     app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
@@ -403,7 +407,6 @@
                     android:ems="10"
                     android:hint="@string/hint"
                     android:importantForAutofill="no"
-                    android:inputType="textPersonName"
                     android:textSize="13sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/soxe_text_gen2"
                     app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
@@ -418,7 +421,6 @@
                     android:ems="10"
                     android:hint="@string/hint"
                     android:importantForAutofill="no"
-                    android:inputType="textPersonName"
                     android:textSize="13sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/sotiencoc_text_gen2"
                     app:layout_constraintEnd_toEndOf="parent"

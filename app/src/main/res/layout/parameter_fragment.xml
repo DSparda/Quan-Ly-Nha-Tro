@@ -88,7 +88,6 @@
             android:ems="10"
             android:hint="@string/hint"
             android:importantForAutofill="no"
-            android:inputType="number"
             app:layout_constraintBaseline_toBaselineOf="@+id/dg_dien_par"
             app:layout_constraintStart_toEndOf="@+id/dg_nuoc_par" />
 
@@ -101,7 +100,6 @@
             android:ems="10"
             android:hint="@string/hint"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/dg_nuoc_par"
             app:layout_constraintStart_toEndOf="@+id/dg_nuoc_par" />
 
@@ -114,7 +112,6 @@
             android:ems="10"
             android:hint="@string/hint"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/dg_phong_par"
             app:layout_constraintStart_toEndOf="@+id/dg_nuoc_par" />
 
@@ -127,7 +124,6 @@
             android:ems="10"
             android:hint="@string/hint"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/dg_xe_par"
             app:layout_constraintStart_toEndOf="@+id/dg_nuoc_par" />
 
@@ -140,7 +136,6 @@
             android:ems="10"
             android:hint="@string/hint"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/dg_net_par"
             app:layout_constraintStart_toEndOf="@+id/dg_nuoc_par" />
 
@@ -153,7 +148,6 @@
             android:ems="10"
             android:hint="@string/hint"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/dg_rac_par"
             app:layout_constraintStart_toEndOf="@+id/dg_nuoc_par" />
 

@@ -11,14 +11,14 @@ data class Phong (
     var MaPhong: Int,
 
     @ColumnInfo(name = "so_nguoi")
-    var SoNguoi:Int?,
+    var SoNguoi:Int,
 
     @ColumnInfo(name = "so_xe")
-    var SoXe: Int?,
+    var SoXe: Int,
 
     @ColumnInfo(name = "so_tien_coc")
-    var SoTienCoc: Int?,
+    var SoTienCoc: Int,
 
     @ColumnInfo(name = "tinh_trang")
-    var TinhTrang: Int?
+    var TinhTrang: Int
 )

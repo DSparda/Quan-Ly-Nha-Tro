@@ -22,7 +22,6 @@
             android:ems="10"
             android:hint="@string/hint"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
             android:textSize="20sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/sotiencoc_text_ren"
             app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_ren" />
@@ -36,7 +35,6 @@
             android:ems="10"
             android:hint="@string/hint"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
             android:textSize="20sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/soxe_text_ren"
             app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_ren" />
