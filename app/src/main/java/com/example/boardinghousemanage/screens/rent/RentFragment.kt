@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doAfterTextChanged
 import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -50,14 +51,14 @@ class RentFragment : Fragment() {
         })
 
         binding.apply {
-            songuoiEditRen.doOnTextChanged { text, start, count, after ->
-                viewModel._songuoi.value = text.toString().toInt()
+            songuoiEditRen.doAfterTextChanged { text ->
+                viewModel._songuoi.value = text.toString().toIntOrNull()
             }
-            soxeEditRen.doOnTextChanged { text, start, count, after ->
-                viewModel._soxe.value = text.toString().toInt()
+            soxeEditRen.doAfterTextChanged { text ->
+                viewModel._soxe.value = text.toString().toIntOrNull()
             }
-            sotiencocEditRen.doOnTextChanged { text, start, count, after ->
-                viewModel._sotiencoc.value = text.toString().toInt()
+            sotiencocEditRen.doAfterTextChanged { text ->
+                viewModel._sotiencoc.value = text.toString().toIntOrNull()
             }
         }
         return binding.root

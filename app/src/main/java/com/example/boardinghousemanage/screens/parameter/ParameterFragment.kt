@@ -4,12 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.widget.doOnTextChanged
+import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.boardinghousemanage.R
 import com.example.boardinghousemanage.database.TroDatabase
 import com.example.boardinghousemanage.databinding.ParameterFragmentBinding
@@ -30,6 +31,8 @@ class ParameterFragment : Fragment() {
         val application = requireNotNull(this.activity).application
         val dataSource = TroDatabase.getInstance(application).thamSoDao
 
+        val parameterFragmentArgs by navArgs<ParameterFragmentArgs>()
+
         viewModelFactory = ParameterViewModelFactory(dataSource, application)
         viewModel =
             ViewModelProviders.of(this, viewModelFactory).get(ParameterViewModel::class.java)
@@ -37,32 +40,40 @@ class ParameterFragment : Fragment() {
         binding.parameterViewModel = viewModel
         binding.setLifecycleOwner(this)
 
-        viewModel.navigateToTitle.observe(this, Observer { event ->
-            if (event) {
-                this.findNavController().navigate(ParameterFragmentDirections.actionParameterFragmentToTitleFragment())
-                viewModel.doneToTitle()
+        viewModel.check.observe(this, Observer { check ->
+            when (check) {
+                0 -> {
+                    this.findNavController()
+                        .navigate(ParameterFragmentDirections.actionParameterToTitle())
+                    viewModel.doneToNavigating()
+                }
+                1 -> {
+                    this.findNavController()
+                        .navigate(ParameterFragmentDirections.actionParameterToGeneral(parameterFragmentArgs.maPhongKey ))
+                    viewModel.doneToNavigating()
+                }
             }
         })
 
 
         binding.apply {
-            dienEditPar.doOnTextChanged { text, start, count, after ->
-                viewModel._sodien.value = text.toString().toInt()
+            dienEditPar.doAfterTextChanged{ text ->
+                viewModel._sodien.value = text.toString().toIntOrNull()
             }
-            nuocEditPar.doOnTextChanged { text, start, count, after ->
-                viewModel._sonuoc.value = text.toString().toInt()
+            nuocEditPar.doAfterTextChanged { text ->
+                viewModel._sonuoc.value = text.toString().toIntOrNull()
             }
-            phongEditPar.doOnTextChanged { text, start, count, after ->
-                viewModel._sophong.value = text.toString().toInt()
+            phongEditPar.doAfterTextChanged { text ->
+                viewModel._sophong.value = text.toString().toIntOrNull()
             }
-            xeEditPar.doOnTextChanged { text, start, count, after ->
-                viewModel._soxe.value = text.toString().toInt()
+            xeEditPar.doAfterTextChanged { text ->
+                viewModel._soxe.value = text.toString().toIntOrNull()
             }
-            netEditPar.doOnTextChanged { text, start, count, after ->
-                viewModel._sonet.value = text.toString().toInt()
+            netEditPar.doAfterTextChanged { text ->
+                viewModel._sonet.value = text.toString().toIntOrNull()
             }
-            racEditPar.doOnTextChanged { text, start, count, after ->
-                viewModel._sorac.value = text.toString().toInt()
+            racEditPar.doAfterTextChanged { text ->
+                viewModel._sorac.value = text.toString().toIntOrNull()
             }
         }
 

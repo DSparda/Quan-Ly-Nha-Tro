@@ -36,14 +36,23 @@
         <argument
             android:name="maPhongKey"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_general_to_parameter"
+            app:destination="@id/parameterFragment" />
     </fragment>
     <fragment
         android:id="@+id/parameterFragment"
         android:name="com.example.boardinghousemanage.screens.parameter.ParameterFragment"
         android:label="ParameterFragment" >
         <action
-            android:id="@+id/action_parameterFragment_to_titleFragment"
+            android:id="@+id/action_parameter_to_title"
             app:destination="@id/titleFragment"
             app:popUpTo="@+id/parameterFragment" />
+        <action
+            android:id="@+id/action_parameter_to_general"
+            app:destination="@id/generalFragment"
+            app:popUpTo="@+id/parameterFragment" />
+        <argument android:name="maPhongKey"
+            app:argType="integer" />
     </fragment>
 </navigation>

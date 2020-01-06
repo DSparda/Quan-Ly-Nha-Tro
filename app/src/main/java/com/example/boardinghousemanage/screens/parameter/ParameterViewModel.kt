@@ -1,6 +1,8 @@
 package com.example.boardinghousemanage.screens.parameter
 
 import android.app.Application
+import android.view.View
+import android.widget.Button
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,12 +19,12 @@ class ParameterViewModel(
 
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    private val _navigateToTitle = MutableLiveData<Boolean>()
-    val navigateToTitle: LiveData<Boolean>
-        get() = _navigateToTitle
+    private val _check = MutableLiveData<Int>()
+    val check: LiveData<Int>
+        get() = _check
 
-    fun doneToTitle() {
-        _navigateToTitle.value = false
+    fun doneToNavigating() {
+        _check.value = -1
     }
 
     val _sodien = MutableLiveData<Int>()
@@ -31,11 +33,19 @@ class ParameterViewModel(
     val _soxe = MutableLiveData<Int>()
     val _sonet = MutableLiveData<Int>()
     val _sorac = MutableLiveData<Int>()
+    val state = database.getState(1)
 
-    fun onXacNhan() {
+    fun mapTag(p: Int): Int =
+        when (p) {
+            0 -> 0
+            else -> 1
+        }
+
+    fun onXacNhan(v: View) {
         uiScope.launch {
 //            _eventInsert.value = true
             val newParameter = ThamSo(
+                1,
                 DonGiaKiDien = _sodien.value!!,
                 DonGiaNuoc = _sonuoc.value!!,
                 DonGiaPhong = _sophong.value!!,
@@ -44,7 +54,11 @@ class ParameterViewModel(
                 DonGiaRac = _sorac.value!!
             )
             insert(newParameter)
-            _navigateToTitle.value = true
+            val b: Button = v as Button
+            when (b.tag) {
+                0 -> _check.value = 0
+                1 -> _check.value = 1
+            }
         }
     }
 
@@ -54,8 +68,12 @@ class ParameterViewModel(
         }
     }
 
-    fun onHuy() {
-        _navigateToTitle.value = true
+    fun onHuy(v: View) {
+        val b: Button = v as Button
+        when (b.tag) {
+            0 -> _check.value = 0
+            1 -> _check.value = 1
+        }
     }
 
     override fun onCleared() {
