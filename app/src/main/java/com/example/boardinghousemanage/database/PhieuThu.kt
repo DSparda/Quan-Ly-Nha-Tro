@@ -6,11 +6,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "phieu_thu_table")
 data class PhieuThu(
-    @PrimaryKey(autoGenerate = true)
-    var MaPhieuThu: Long = 0L,
-
-    @ColumnInfo(name = "ma_phong")
-    var MaPhongThu: Int,
+    @PrimaryKey
+    var MaPhieuThu: Int,
 
     @ColumnInfo(name = "thang_thu")
     var ThangThu: Int,
@@ -34,5 +31,8 @@ data class PhieuThu(
     var TienMang: Int,
 
     @ColumnInfo(name = "tien_rac")
-    var TienRac: Int
+    var TienRac: Int,
+
+    @ColumnInfo(name = "tien_tong")
+    var TienTong: Int
 )

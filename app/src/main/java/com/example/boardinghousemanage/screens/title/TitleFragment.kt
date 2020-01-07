@@ -1,23 +1,19 @@
 package com.example.boardinghousemanage.screens.title
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import androidx.fragment.app.Fragment
-import android.widget.Toast
-
+import android.widget.Button
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LiveData
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.navigation.ui.NavigationUI
 import com.example.boardinghousemanage.R
 import com.example.boardinghousemanage.database.TroDatabase
 import com.example.boardinghousemanage.databinding.TitleFragmentBinding
+import java.util.*
+
 
 class TitleFragment : Fragment() {
 
@@ -35,8 +31,9 @@ class TitleFragment : Fragment() {
 
         val application = requireNotNull(this.activity).application
         val dataSource = TroDatabase.getInstance(application).phongDao
+        val dataSourcePT = TroDatabase.getInstance(application).phieuThuDao
 
-        viewModelFactory = TitleViewModelFactory(dataSource, application)
+        viewModelFactory = TitleViewModelFactory(dataSource, dataSourcePT, application)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(TitleViewModel::class.java)
 
 
@@ -64,11 +61,21 @@ class TitleFragment : Fragment() {
 
         binding.apply {
             buttonTang12.setOnLongClickListener {
-                if (viewModel.p102State.value == 3)
-                    viewModel.longPress(102, 2)
+                viewModel.p102State?.let {
+                    if (viewModel.p102State.value == 3) {
+                        viewModel.longPress(102, 2)
+                    }
+                }
                 true
             }
         }
+
+        val myTimer = Timer()
+        myTimer.schedule(object : TimerTask() {
+            override fun run() {
+                viewModel.rotate()
+            }
+        }, 0, 2000)
 
         setHasOptionsMenu(true)
 

@@ -319,15 +319,16 @@ class GeneralViewModel(
     fun onXacNhanThuPhi() {
         uiScope.launch {
             val newPhieuThu = PhieuThu(
-                MaPhongThu = _maPhong.value!!,
-                ThangThu = thang,
-                NamThu = nam,
-                TienDien = tienDienReal.value!!,
-                TienNuoc = tienNuocReal.value!!,
-                TienPhong = tienPhongReal.value!!,
-                TienXe = tienXeReal.value!!,
-                TienMang = tienNetReal.value!!,
-                TienRac = tienRacReal.value!!
+                maPhong.value!!,
+                thang,
+                nam,
+                tienDienReal.value!!,
+                tienNuocReal.value!!,
+                tienPhongReal.value!!,
+                tienXeReal.value!!,
+                tienNetReal.value!!,
+                tienRacReal.value!!,
+                tienTongReal.value!!
             )
             updateState(_maPhong.value!!)
             insert(newPhieuThu)
