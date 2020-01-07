@@ -37,10 +37,12 @@ class RentViewModel(
 
     fun onXacNhan() {
         uiScope.launch {
-            val newRoom = Phong(_maPhong.value!!, _songuoi.value!!, _soxe.value!!, _sotiencoc.value!!, 1)
+            val newRoom =
+                Phong(_maPhong.value!!, _songuoi.value!!, _soxe.value!!, _sotiencoc.value!!, 1)
             insert(newRoom)
             _navigateToTitle.value = true
         }
+
     }
 
     private suspend fun insert(phong: Phong) {
@@ -55,6 +57,16 @@ class RentViewModel(
 
     fun doneToTitle() {
         _navigateToTitle.value = false
+    }
+
+    var check1 = false
+    var check2 = false
+    var check3 = false
+
+    fun check(c1: Boolean, c2: Boolean, c3:Boolean):Boolean {
+        if (c1 == true && c2 == true && c3 == true)
+            return true
+        return false
     }
 
     override fun onCleared() {

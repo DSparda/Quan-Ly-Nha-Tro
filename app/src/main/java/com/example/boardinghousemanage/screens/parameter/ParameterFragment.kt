@@ -40,16 +40,22 @@ class ParameterFragment : Fragment() {
         binding.parameterViewModel = viewModel
         binding.setLifecycleOwner(this)
 
+        viewModel._state.value = parameterFragmentArgs.from
+
         viewModel.check.observe(this, Observer { check ->
             when (check) {
                 0 -> {
                     this.findNavController()
-                        .navigate(ParameterFragmentDirections.actionParameterToTitle())
+                        .navigate(ParameterFragmentDirections.actionParameterToTitle("0"))
                     viewModel.doneToNavigating()
                 }
                 1 -> {
                     this.findNavController()
-                        .navigate(ParameterFragmentDirections.actionParameterToGeneral(parameterFragmentArgs.maPhongKey ))
+                        .navigate(
+                            ParameterFragmentDirections.actionParameterToGeneral(
+                                parameterFragmentArgs.maPhongKey
+                            )
+                        )
                     viewModel.doneToNavigating()
                 }
             }
@@ -57,23 +63,102 @@ class ParameterFragment : Fragment() {
 
 
         binding.apply {
-            dienEditPar.doAfterTextChanged{ text ->
-                viewModel._sodien.value = text.toString().toIntOrNull()
+            dienEditPar.doAfterTextChanged { text ->
+                if (text.toString() == "") {
+                    viewModel.check1 = false
+                    dienEditPar.setError("Vui lòng nhập")
+                    buttonXacnhanPar.visibility = View.INVISIBLE
+                } else {
+                    viewModel._sodien.value = text.toString().toIntOrNull()
+                    viewModel.check1 = true
+                    if (viewModel.check(
+                            viewModel.check1, viewModel.check2, viewModel.check3,
+                            viewModel.check4, viewModel.check5, viewModel.check6
+                        )
+                    )
+                        buttonXacnhanPar.visibility = View.VISIBLE
+                }
             }
             nuocEditPar.doAfterTextChanged { text ->
-                viewModel._sonuoc.value = text.toString().toIntOrNull()
+                if (text.toString() == "") {
+                    nuocEditPar.setError("Vui lòng nhập")
+                    viewModel.check2 = false
+                    buttonXacnhanPar.visibility = View.INVISIBLE
+                } else {
+                    viewModel._sonuoc.value = text.toString().toIntOrNull()
+                    viewModel.check2 = true
+                    if (viewModel.check(
+                            viewModel.check1, viewModel.check2, viewModel.check3,
+                            viewModel.check4, viewModel.check5, viewModel.check6
+                        )
+                    )
+                        buttonXacnhanPar.visibility = View.VISIBLE
+                }
+
             }
             phongEditPar.doAfterTextChanged { text ->
-                viewModel._sophong.value = text.toString().toIntOrNull()
+                if (text.toString() == "") {
+                    viewModel.check3 = false
+                    phongEditPar.setError("Vui lòng nhập")
+                    buttonXacnhanPar.visibility = View.INVISIBLE
+                } else {
+                    viewModel._sophong.value = text.toString().toIntOrNull()
+                    viewModel.check3 = true
+                    if (viewModel.check(
+                            viewModel.check1, viewModel.check2, viewModel.check3,
+                            viewModel.check4, viewModel.check5, viewModel.check6
+                        )
+                    )
+                        buttonXacnhanPar.visibility = View.VISIBLE
+                }
             }
             xeEditPar.doAfterTextChanged { text ->
-                viewModel._soxe.value = text.toString().toIntOrNull()
+                if (text.toString() == "") {
+                    viewModel.check4 = false
+                    xeEditPar.setError("Vui lòng nhập")
+                    buttonXacnhanPar.visibility = View.INVISIBLE
+                } else {
+                    viewModel.check4 = true
+                    viewModel._soxe.value = text.toString().toIntOrNull()
+                    if (viewModel.check(
+                            viewModel.check1, viewModel.check2, viewModel.check3,
+                            viewModel.check4, viewModel.check5, viewModel.check6
+                        )
+                    )
+                        buttonXacnhanPar.visibility = View.VISIBLE
+                }
             }
             netEditPar.doAfterTextChanged { text ->
-                viewModel._sonet.value = text.toString().toIntOrNull()
+                if (text.toString() == "") {
+                    viewModel.check5 = false
+                    buttonXacnhanPar.visibility = View.INVISIBLE
+                    netEditPar.setError("Vui lòng nhập")
+                } else {
+                    viewModel.check5 = true
+                    viewModel._sonet.value = text.toString().toIntOrNull()
+                    if (viewModel.check(
+                            viewModel.check1, viewModel.check2, viewModel.check3,
+                            viewModel.check4, viewModel.check5, viewModel.check6
+                        )
+                    )
+                        buttonXacnhanPar.visibility = View.VISIBLE
+                }
             }
             racEditPar.doAfterTextChanged { text ->
-                viewModel._sorac.value = text.toString().toIntOrNull()
+                if (text.toString() == "") {
+                    viewModel.check6 = false
+                    buttonXacnhanPar.visibility = View.INVISIBLE
+                    racEditPar.setError("Vui lòng nhập")
+                } else {
+                    viewModel.check6 = true
+                    viewModel._sorac.value = text.toString().toIntOrNull()
+                    if (viewModel.check(
+                            viewModel.check1, viewModel.check2, viewModel.check3,
+                            viewModel.check4, viewModel.check5, viewModel.check6
+                        )
+                    )
+                        buttonXacnhanPar.visibility = View.VISIBLE
+                }
             }
         }
 

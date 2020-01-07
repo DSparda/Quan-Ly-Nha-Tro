@@ -48,6 +48,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p101State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p101State)}"
                     android:text="@string/name_101" />
 
                 <Button
@@ -67,6 +68,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p103State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p103State)}"
                     android:text="@string/name_103"
                     android:textColor="@color/Black" />
 
@@ -78,6 +80,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p104State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p104State)}"
                     android:text="@string/name_104"
                     android:textColor="@color/Black" />
 
@@ -89,6 +92,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p105State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p105State)}"
                     android:text="@string/name_105"
                     android:textColor="@color/Black" />
 
@@ -119,6 +123,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p201State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p201State)}"
                     android:text="@string/name_201"
                     android:textColor="@color/Black" />
 
@@ -130,6 +135,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p202State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p202State)}"
                     android:text="@string/name_202"
                     android:textColor="@color/Black" />
 
@@ -141,6 +147,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p203State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p203State)}"
                     android:text="@string/name_203"
                     android:textColor="@color/Black" />
 
@@ -152,6 +159,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p204State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p204State)}"
                     android:text="@string/name_204"
                     android:textColor="@color/Black" />
 
@@ -163,6 +171,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p205State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p205State)}"
                     android:text="@string/name_205"
                     android:textColor="@color/Black" />
 
@@ -194,6 +203,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p301State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p301State)}"
                     android:text="@string/name_301"
                     android:textColor="@color/Black" />
 
@@ -204,6 +214,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p302State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p302State)}"
                     android:text="@string/name_302"
                     android:textColor="@color/Black" />
 
@@ -215,6 +226,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p303State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p303State)}"
                     android:text="@string/name_303"
                     android:textColor="@color/Black" />
 
@@ -226,6 +238,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p304State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p304State)}"
                     android:text="@string/name_304"
                     android:textColor="@color/Black" />
 
@@ -236,6 +249,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p305State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p305State)}"
                     android:text="@string/name_305"
                     android:textColor="@color/Black" />
 
@@ -266,6 +280,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p401State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p401State)}"
                     android:text="@string/name_401"
                     android:textColor="@color/Black" />
 
@@ -277,6 +292,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p402State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p402State)}"
                     android:text="@string/name_402"
                     android:textColor="@color/Black" />
 
@@ -288,6 +304,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p403State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p403State)}"
                     android:text="@string/name_403"
                     android:textColor="@color/Black" />
 
@@ -299,6 +316,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p404State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p404State)}"
                     android:text="@string/name_404"
                     android:textColor="@color/Black" />
 
@@ -310,6 +328,7 @@
                     android:layout_height="@dimen/button_room_height"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p405State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p405State)}"
                     android:text="@string/name_405"
                     android:textColor="@color/Black" />
 
@@ -341,6 +360,7 @@
                     android:layout_marginStart="64dp"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p501State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p501State)}"
                     android:text="@string/name_501"
                     android:textColor="@color/Black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -357,6 +377,7 @@
                     android:layout_marginEnd="64dp"
                     android:background="@{titleViewModel.mapColor(titleViewModel.p502State)}"
                     android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                    android:tag="@{titleViewModel.mapTag(titleViewModel.p502State)}"
                     android:text="@string/name_502"
                     android:textColor="@color/Black"
                     app:layout_constraintBottom_toBottomOf="parent"

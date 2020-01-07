@@ -33,17 +33,11 @@ class ParameterViewModel(
     val _soxe = MutableLiveData<Int>()
     val _sonet = MutableLiveData<Int>()
     val _sorac = MutableLiveData<Int>()
-    val state = database.getState(1)
+    val _state = MutableLiveData<Int>()
 
-    fun mapTag(p: Int): Int =
-        when (p) {
-            0 -> 0
-            else -> 1
-        }
-
-    fun onXacNhan(v: View) {
+    fun onXacNhan() {
         uiScope.launch {
-//            _eventInsert.value = true
+            //            _eventInsert.value = true
             val newParameter = ThamSo(
                 1,
                 DonGiaKiDien = _sodien.value!!,
@@ -54,8 +48,7 @@ class ParameterViewModel(
                 DonGiaRac = _sorac.value!!
             )
             insert(newParameter)
-            val b: Button = v as Button
-            when (b.tag) {
+            when (_state.value) {
                 0 -> _check.value = 0
                 1 -> _check.value = 1
             }
@@ -68,12 +61,24 @@ class ParameterViewModel(
         }
     }
 
-    fun onHuy(v: View) {
-        val b: Button = v as Button
-        when (b.tag) {
+    fun onHuy() {
+        when (_state.value) {
             0 -> _check.value = 0
             1 -> _check.value = 1
         }
+    }
+
+    var check1 = false
+    var check2 = false
+    var check3 = false
+    var check4 = false
+    var check5 = false
+    var check6 = false
+
+    fun check(c1: Boolean, c2: Boolean, c3: Boolean, c4: Boolean, c5: Boolean, c6: Boolean): Boolean {
+        if (c1 == true && c2 == true && c3 == true && c4 == true && c5 == true && c6 == true)
+            return true
+        return false
     }
 
     override fun onCleared() {

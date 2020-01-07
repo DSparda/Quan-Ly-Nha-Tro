@@ -5,10 +5,12 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Phong::class], version = 1, exportSchema = false)
+@Database(entities = [Phong::class, ThamSo::class, PhieuThu::class], version = 1, exportSchema = false)
 abstract class TroDatabase : RoomDatabase() {
 
+    abstract val thamSoDao: ThamSoDao
     abstract val phongDao: PhongDao
+    abstract val phieuThuDao: PhieuThuDao
 
     companion object {
         @Volatile

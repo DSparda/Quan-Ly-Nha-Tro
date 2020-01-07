@@ -28,7 +28,4 @@ interface ThamSoDao {
 
     @Query("SELECT IFNULL (don_gia_rac, 0) FROM tham_so")
     fun getRac(): LiveData<Int>
-
-    @Query("SELECT IFNULL (MaSo, 0 ) FROM tham_so WHERE MaSo = :key")
-    fun getState(key: Int?): LiveData<Int>
 }

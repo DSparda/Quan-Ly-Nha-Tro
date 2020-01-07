@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doAfterTextChanged
-import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -45,20 +44,48 @@ class RentFragment : Fragment() {
 
         viewModel.navigateToTitle.observe(this, Observer { event ->
             if (event) {
-                this.findNavController().navigate(RentFragmentDirections.actionRentToTitle())
+                this.findNavController().navigate(RentFragmentDirections.actionRentToTitle(viewModel.maPhong.value.toString()))
                 viewModel.doneToTitle()
             }
         })
 
         binding.apply {
             songuoiEditRen.doAfterTextChanged { text ->
-                viewModel._songuoi.value = text.toString().toIntOrNull()
+                if (text.toString() == "") {
+                    viewModel.check1 = false
+                    songuoiEditRen.setError("Vui lòng nhập")
+                    buttonXacnhanRen.visibility = View.INVISIBLE
+                } else {
+                    viewModel._songuoi.value = text.toString().toIntOrNull()
+                    viewModel.check1 = true
+                    if (viewModel.check(viewModel.check1, viewModel.check2, viewModel.check3))
+                        buttonXacnhanRen.visibility = View.VISIBLE
+                }
             }
             soxeEditRen.doAfterTextChanged { text ->
-                viewModel._soxe.value = text.toString().toIntOrNull()
+                if (text.toString() == "") {
+                    viewModel.check2 = false
+                    soxeEditRen.setError("Vui lòng nhập")
+                    buttonXacnhanRen.visibility = View.INVISIBLE
+                } else {
+                    viewModel._soxe.value = text.toString().toIntOrNull()
+                    viewModel.check2 = true
+                    if (viewModel.check(viewModel.check1, viewModel.check2, viewModel.check3))
+                        buttonXacnhanRen.visibility = View.VISIBLE
+                }
             }
+
             sotiencocEditRen.doAfterTextChanged { text ->
-                viewModel._sotiencoc.value = text.toString().toIntOrNull()
+                if (text.toString() == "") {
+                    viewModel.check3 = false
+                    sotiencocEditRen.setError("Vui lòng nhập")
+                    buttonXacnhanRen.visibility = View.INVISIBLE
+                } else {
+                    viewModel._sotiencoc.value = text.toString().toIntOrNull()
+                    viewModel.check3 = true
+                    if (viewModel.check(viewModel.check1, viewModel.check2, viewModel.check3))
+                        buttonXacnhanRen.visibility = View.VISIBLE
+                }
             }
         }
         return binding.root

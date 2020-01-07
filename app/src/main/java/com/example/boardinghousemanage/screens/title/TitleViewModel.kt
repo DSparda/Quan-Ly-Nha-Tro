@@ -18,6 +18,10 @@ class TitleViewModel(
     application: Application
 ) : AndroidViewModel(application) {
 
+    private var viewModelJob = Job()
+
+    private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+
     val p101State = database.getState(101)
     val p102State = database.getState(102)
     val p103State = database.getState(103)
@@ -41,6 +45,18 @@ class TitleViewModel(
     val p501State = database.getState(501)
     val p502State = database.getState(502)
 
+    fun longPress(key: Int, state :Int) {
+        uiScope.launch {
+            update(key, state)
+        }
+    }
+
+    private suspend fun update(key: Int, state: Int) {
+        withContext(Dispatchers.IO) {
+            database.updateState(key, state)
+        }
+    }
+
     fun mapColor(p: Int): Drawable =
         when (p) {
             1 -> Color.YELLOW.toDrawable()
@@ -56,7 +72,7 @@ class TitleViewModel(
         }
 
     //region Xử lí radioButton check
-    private val _radioChecked = MutableLiveData<Int>()
+    val _radioChecked = MutableLiveData<Int>()
     val radioChecked: LiveData<Int>
         get() = _radioChecked
 
@@ -131,5 +147,10 @@ class TitleViewModel(
 
     fun doneNavigate() {
         _check.value = -1
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelJob.cancel()
     }
 }

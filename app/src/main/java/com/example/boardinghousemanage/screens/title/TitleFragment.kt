@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.NavigationUI
 import com.example.boardinghousemanage.R
 import com.example.boardinghousemanage.database.TroDatabase
@@ -38,6 +39,7 @@ class TitleFragment : Fragment() {
         viewModelFactory = TitleViewModelFactory(dataSource, application)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(TitleViewModel::class.java)
 
+
         binding.titleViewModel = viewModel
         binding.setLifecycleOwner(this)
 
@@ -50,16 +52,29 @@ class TitleFragment : Fragment() {
                 }
                 1 -> {
                     this.findNavController()
-                        .navigate(TitleFragmentDirections.actionTitleFragmentToGeneralFragment(viewModel.maPhong.value!!))
+                        .navigate(
+                            TitleFragmentDirections.actionTitleFragmentToGeneralFragment(
+                                viewModel.maPhong.value!!
+                            )
+                        )
                     viewModel.doneNavigate()
                 }
             }
         })
 
+        binding.apply {
+            buttonTang12.setOnLongClickListener {
+                if (viewModel.p102State.value == 3)
+                    viewModel.longPress(102, 2)
+                true
+            }
+        }
+
         setHasOptionsMenu(true)
 
         return binding.root
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
@@ -67,9 +82,18 @@ class TitleFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item!!,
-            view!!.findNavController())
-                || super.onOptionsItemSelected(item)
+        this.findNavController()
+            .navigate(TitleFragmentDirections.actionTitleFragmentToParameterFragment(0, 0))
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onResume() {
+        val titleFragmentArgs by navArgs<TitleFragmentArgs>()
+        viewModel._radioChecked.value = titleFragmentArgs.radio.take(1).toInt()
+        super.onResume()
     }
 }
+
+
+
 

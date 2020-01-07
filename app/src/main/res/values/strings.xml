@@ -51,8 +51,9 @@
     <string name="tien_nuoc">Tiền nước:</string>
 
     <string name="don_gia_dien">Tiền/ kWh Điện:</string>
-    <string name="don_gia_nuoc">Tiền nước/ Người:</string>
-    <string name="dg_xe">Tiền xe/ xe:</string>
+    <string name="don_gia_nuoc">Tiền nước/Người:</string>
+    <string name="dg_xe">Tiền xe/ Xe:</string>
     <string name="menu_item">Cập nhật đơn giá</string>
+    <string name="khong_value">.000</string>
 
 </resources>

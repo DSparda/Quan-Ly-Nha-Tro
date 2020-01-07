@@ -1,6 +1,5 @@
 package com.example.boardinghousemanage.database
 
-import androidx.lifecycle.LiveData
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
