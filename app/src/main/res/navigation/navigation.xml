@@ -7,69 +7,102 @@
     <fragment
         android:id="@+id/titleFragment"
         android:name="com.example.boardinghousemanage.screens.title.TitleFragment"
-        android:label="TitleFragment">
+        android:label="Quản Lý Nhà Trọ Trí Đức">
         <action
             android:id="@+id/action_title_to_rent"
             app:destination="@id/rentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
             app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@+id/titleFragment"
             app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_titleFragment_to_generalFragment"
             app:destination="@id/generalFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@+id/titleFragment" />
         <action
             android:id="@+id/action_titleFragment_to_parameterFragment"
             app:destination="@id/parameterFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@+id/titleFragment" />
         <argument
             android:name="radio"
-            app:argType="string"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/rentFragment"
         android:name="com.example.boardinghousemanage.screens.rent.RentFragment"
-        android:label="RentFragment">
+        android:label="Cho thuê phòng">
         <argument
             android:name="maPhongKey"
             app:argType="integer" />
         <action
             android:id="@+id/action_rent_to_title"
             app:destination="@id/titleFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
             app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@+id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/generalFragment"
         android:name="com.example.boardinghousemanage.screens.general.GeneralFragment"
-        android:label="GeneralFragment" >
+        android:label="Bảng chức năng">
         <argument
             android:name="maPhongKey"
             app:argType="integer" />
         <action
             android:id="@+id/action_general_to_parameter"
             app:destination="@id/parameterFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@+id/generalFragment" />
         <action
             android:id="@+id/action_general_to_title"
             app:destination="@id/titleFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
             app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@+id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/parameterFragment"
         android:name="com.example.boardinghousemanage.screens.parameter.ParameterFragment"
-        android:label="ParameterFragment" >
+        android:label="Cập nhật đơn giá">
         <action
             android:id="@+id/action_parameter_to_title"
             app:destination="@id/titleFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@+id/parameterFragment" />
         <action
             android:id="@+id/action_parameter_to_general"
             app:destination="@id/generalFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@+id/parameterFragment" />
-        <argument android:name="maPhongKey"
+        <argument
+            android:name="maPhongKey"
             app:argType="integer" />
         <argument
             android:name="from"

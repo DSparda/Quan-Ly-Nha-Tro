@@ -14,518 +14,529 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/hienCoPhong"
-            style="@style/ValueText20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@{generalViewModel.phongString}"
-            android:textSize="17sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/hienCoNguoi"
-            style="@style/ValueText20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="@{generalViewModel.soNguoiString}"
-            android:textSize="17sp"
-            app:layout_constraintEnd_toStartOf="@+id/hienCoXe"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hienCoPhong" />
-
-        <TextView
-            android:id="@+id/hienCoXe"
-            style="@style/ValueText20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@{generalViewModel.soXeString}"
-            android:textSize="17sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/hienCoNguoi"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/hienCoNguoi" />
-
-        <TextView
-            android:id="@+id/hienCoTienCoc"
-            style="@style/ValueText20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="@{generalViewModel.soTienCocString}"
-            android:textSize="17sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hienCoNguoi" />
-
-        <RadioGroup
-            android:id="@+id/radio_gr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hienCoPhong">
-
-            <RadioButton
-                android:id="@+id/radio_thu_phi"
-                style="@style/RadioStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="@{() -> generalViewModel.radio1Checked()}"
-                android:text="@string/thu_phi"
-                android:textSize="25sp" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_thu_phi"
+            <TextView
+                android:id="@+id/hienCoPhong"
+                style="@style/ValueText20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="@{generalViewModel.layoutChecked1}"
-                tools:visibility="gone">
-
-                <TextView
-                    android:id="@+id/phong_text_gen"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24sp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/phong_thue"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/thoigian_text_gen"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24sp"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/thoi_gian"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/phong_text_gen" />
-
-                <TextView
-                    android:id="@+id/dien_text_gen"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24sp"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/ki_dien"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/thoigian_text_gen" />
-
-                <TextView
-                    android:id="@+id/nuoc_text_gen"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24sp"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/tien_nuoc"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dien_text_gen" />
-
-                <TextView
-                    android:id="@+id/tienphong_text_gen"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24sp"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/tien_phong"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nuoc_text_gen" />
-
-                <TextView
-                    android:id="@+id/tienxe_text_gen"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24sp"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/tien_xe"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tienphong_text_gen" />
-
-                <TextView
-                    android:id="@+id/tiennet_gen_text"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24sp"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/tien_net"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tienxe_text_gen" />
-
-                <TextView
-                    android:id="@+id/tienrac_text_gen"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24sp"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/tien_rac"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tiennet_gen_text" />
-
-                <TextView
-                    android:id="@+id/tientong_text_gen"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24sp"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/tong"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tienrac_text_gen" />
-
-                <TextView
-                    android:id="@+id/phong_edit_gen"
-                    style="@style/ValueText15sp"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="@{generalViewModel.maPhongString}"
-                    android:textSize="15sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/phong_text_gen"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
-
-                <TextView
-                    android:id="@+id/thoigian_edit_gen"
-                    style="@style/ValueText15sp"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:text="@{generalViewModel.thoiGianString}"
-                    android:textSize="15sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/thoigian_text_gen"
-                    app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
-
-                <EditText
-                    android:id="@+id/dien_edit_gen"
-                    style="@style/EditTextStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:ems="10"
-                    android:hint="@string/hint"
-                    android:importantForAutofill="no"
-                    android:textSize="13sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/dien_text_gen"
-                    app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
-
-                <TextView
-                    android:id="@+id/nuoc_edit_gen"
-                    style="@style/ValueText15sp"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:text="@{generalViewModel.tienNuocString}"
-                    android:textSize="15sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/nuoc_text_gen"
-                    app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
-
-                <TextView
-                    android:id="@+id/tienphong_edit_gen"
-                    style="@style/ValueText15sp"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:text="@{generalViewModel.tienPhongString}"
-                    android:textSize="15sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/tienphong_text_gen"
-                    app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
-
-                <TextView
-                    android:id="@+id/tienxe_edit_gen"
-                    style="@style/ValueText15sp"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:text="@{generalViewModel.tienXeString}"
-                    android:textSize="15sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/tienxe_text_gen"
-                    app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
-
-                <TextView
-                    android:id="@+id/tiennet_edit_gen"
-                    style="@style/ValueText15sp"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:text="@{generalViewModel.tienNetString}"
-                    android:textSize="15sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/tiennet_gen_text"
-                    app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
-
-                <TextView
-                    android:id="@+id/tienrac_edit_gen"
-                    style="@style/ValueText15sp"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:text="@{generalViewModel.tienRacString}"
-                    android:textSize="15sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/tienrac_text_gen"
-                    app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
-
-                <TextView
-                    android:id="@+id/tientong_edit_gen"
-                    style="@style/ValueText15sp"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:text="@{generalViewModel.tienTongString}"
-                    android:textSize="15sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/tientong_text_gen"
-                    app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
-
-                <Button
-                    android:id="@+id/button_xacnhan_gen1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:onClick="@{() -> generalViewModel.onXacNhanThuPhi()}"
-                    android:text="@string/button_xacnhan"
-                    android:visibility="invisible"
-                    app:layout_constraintEnd_toStartOf="@+id/button_huy_gen1"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tientong_text_gen" />
-
-                <Button
-                    android:id="@+id/button_huy_gen1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:onClick="@{() -> generalViewModel.onHuy()}"
-                    android:text="@string/button_huy"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/button_xacnhan_gen1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/button_xacnhan_gen1" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <RadioButton
-                android:id="@+id/radio_cap_nhat"
-                style="@style/RadioStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:onClick="@{() -> generalViewModel.radio3Checked()}"
-                android:text="@string/cap_nhat"
-                android:textSize="25sp"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_cap_nhat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:visibility="@{generalViewModel.layoutChecked3}"
+                android:layout_marginTop="6dp"
+                android:text="@{generalViewModel.phongString}"
+                android:textSize="17sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:visibility="visible">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/khong_value"
-                    android:textSize="13sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/sotiencoc_edit_gen2"
-                    app:layout_constraintStart_toEndOf="@+id/sotiencoc_edit_gen2" />
-
-                <TextView
-                    android:id="@+id/phong_text_gen2"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/phong_thue"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/songuoi_text_gen2"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/songuoi_thue"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/phong_text_gen2" />
-
-                <TextView
-                    android:id="@+id/soxe_text_gen2"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/soxe_thue"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/songuoi_text_gen2" />
-
-                <TextView
-                    android:id="@+id/sotiencoc_text_gen2"
-                    style="@style/ValueText20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/sotiencoc_thue"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/soxe_text_gen2" />
-
-                <TextView
-                    android:id="@+id/phong_edit_gen2"
-                    style="@style/ValueText15sp"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="@{generalViewModel.maPhongString}"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/phong_text_gen2"
-                    app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
-
-                <EditText
-                    android:id="@+id/songuoi_edit_gen2"
-                    style="@style/EditTextStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:ems="10"
-                    android:hint="@string/hint"
-                    android:importantForAutofill="no"
-                    android:textSize="13sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/songuoi_text_gen2"
-                    app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
-
-                <EditText
-                    android:id="@+id/soxe_edit_gen2"
-                    style="@style/EditTextStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:ems="10"
-                    android:hint="@string/hint"
-                    android:importantForAutofill="no"
-                    android:textSize="13sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/soxe_text_gen2"
-                    app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
-
-                <EditText
-                    android:id="@+id/sotiencoc_edit_gen2"
-                    style="@style/EditTextStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="32dp"
-                    android:ems="10"
-                    android:hint="@string/hint"
-                    android:importantForAutofill="no"
-                    android:textSize="13sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/sotiencoc_text_gen2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
-
-                <Button
-                    android:id="@+id/button_xacnhan_gen3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:onClick="@{() -> generalViewModel.onXacNhanCN()}"
-                    android:text="@string/button_xacnhan"
-                    android:visibility="invisible"
-                    app:layout_constraintEnd_toStartOf="@+id/button_huy_gen3"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/sotiencoc_text_gen2" />
-
-                <Button
-                    android:id="@+id/button_huy_gen3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:onClick="@{() -> generalViewModel.onHuy()}"
-                    android:text="@string/button_huy"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/button_xacnhan_gen3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/button_xacnhan_gen3" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <RadioButton
-                android:id="@+id/radio_tra_phong"
-                style="@style/RadioStyle"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/hienCoNguoi"
+                style="@style/ValueText20sp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:onClick="@{() -> generalViewModel.radio2Checked()}"
-                android:text="@string/tra_phong"
-                android:textSize="25sp" />
+                android:layout_marginTop="4dp"
+                android:text="@{generalViewModel.soNguoiString}"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toStartOf="@+id/hienCoXe"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hienCoPhong" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_tra_phong"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/hienCoXe"
+                style="@style/ValueText20sp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="@{generalViewModel.layoutChecked2}">
+                android:layout_marginStart="16dp"
+                android:text="@{generalViewModel.soXeString}"
+                android:textSize="17sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/hienCoNguoi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/hienCoNguoi" />
 
-                <Button
-                    android:id="@+id/button_huy2"
+            <TextView
+                android:id="@+id/hienCoTienCoc"
+                style="@style/ValueText20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{generalViewModel.soTienCocString}"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hienCoNguoi" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hienCoTienCoc">
+
+            <RadioGroup
+                android:id="@+id/radio_gr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hienCoTienCoc">
+
+
+                <RadioButton
+                    android:id="@+id/radio_thu_phi"
+                    style="@style/RadioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> generalViewModel.radio1Checked()}"
+                    android:text="@string/thu_phi"
+                    android:textSize="23sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_thu_phi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:onClick="@{() -> generalViewModel.onHuy()}"
-                    android:text="@string/button_huy"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/button_xacnhan2"
+                    android:visibility="@{generalViewModel.layoutChecked1}"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/phong_text_gen"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/phong_thue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/thoigian_text_gen"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/thoi_gian"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/phong_text_gen" />
+
+                    <TextView
+                        android:id="@+id/dien_text_gen"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/ki_dien"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/thoigian_text_gen" />
+
+                    <TextView
+                        android:id="@+id/nuoc_text_gen"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/tien_nuoc"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dien_text_gen" />
+
+                    <TextView
+                        android:id="@+id/tienphong_text_gen"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/tien_phong"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nuoc_text_gen" />
+
+                    <TextView
+                        android:id="@+id/tienxe_text_gen"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/tien_xe"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tienphong_text_gen" />
+
+                    <TextView
+                        android:id="@+id/tiennet_gen_text"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/tien_net"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tienxe_text_gen" />
+
+                    <TextView
+                        android:id="@+id/tienrac_text_gen"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/tien_rac"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tiennet_gen_text" />
+
+                    <TextView
+                        android:id="@+id/tientong_text_gen"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/tong"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tienrac_text_gen" />
+
+                    <TextView
+                        android:id="@+id/phong_edit_gen"
+                        style="@style/ValueText15sp"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@{generalViewModel.maPhongString}"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/phong_text_gen"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
+
+                    <TextView
+                        android:id="@+id/thoigian_edit_gen"
+                        style="@style/ValueText15sp"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:text="@{generalViewModel.thoiGianString}"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/thoigian_text_gen"
+                        app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
+
+                    <EditText
+                        android:id="@+id/dien_edit_gen"
+                        style="@style/EditTextStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:ems="10"
+                        android:hint="@string/hint"
+                        android:importantForAutofill="no"
+                        android:textSize="13sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/dien_text_gen"
+                        app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
+
+                    <TextView
+                        android:id="@+id/nuoc_edit_gen"
+                        style="@style/ValueText15sp"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:text="@{generalViewModel.tienNuocString}"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/nuoc_text_gen"
+                        app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
+
+                    <TextView
+                        android:id="@+id/tienphong_edit_gen"
+                        style="@style/ValueText15sp"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:text="@{generalViewModel.tienPhongString}"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tienphong_text_gen"
+                        app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
+
+                    <TextView
+                        android:id="@+id/tienxe_edit_gen"
+                        style="@style/ValueText15sp"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:text="@{generalViewModel.tienXeString}"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tienxe_text_gen"
+                        app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
+
+                    <TextView
+                        android:id="@+id/tiennet_edit_gen"
+                        style="@style/ValueText15sp"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:text="@{generalViewModel.tienNetString}"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tiennet_gen_text"
+                        app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
+
+                    <TextView
+                        android:id="@+id/tienrac_edit_gen"
+                        style="@style/ValueText15sp"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:text="@{generalViewModel.tienRacString}"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tienrac_text_gen"
+                        app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
+
+                    <TextView
+                        android:id="@+id/tientong_edit_gen"
+                        style="@style/ValueText15sp"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:text="@{generalViewModel.tienTongString}"
+                        android:textSize="15sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tientong_text_gen"
+                        app:layout_constraintStart_toEndOf="@+id/tiennet_gen_text" />
+
+                    <Button
+                        android:id="@+id/button_xacnhan_gen1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:onClick="@{() -> generalViewModel.onXacNhanThuPhi()}"
+                        android:text="@string/button_xacnhan"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toStartOf="@+id/button_huy_gen1"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tientong_text_gen" />
+
+                    <Button
+                        android:id="@+id/button_huy_gen1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:onClick="@{() -> generalViewModel.onHuy()}"
+                        android:text="@string/button_huy"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/button_xacnhan_gen1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/button_xacnhan_gen1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RadioButton
+                    android:id="@+id/radio_cap_nhat"
+                    style="@style/RadioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:onClick="@{() -> generalViewModel.radio3Checked()}"
+                    android:text="@string/cap_nhat"
+                    android:textSize="23sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_cap_nhat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:visibility="@{generalViewModel.layoutChecked3}"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button_xacnhan2" />
+                    tools:visibility="visible">
 
-                <Button
-                    android:id="@+id/button_xacnhan2"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/khong_value"
+                        android:textSize="13sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/sotiencoc_edit_gen2"
+                        app:layout_constraintStart_toEndOf="@+id/sotiencoc_edit_gen2" />
+
+                    <TextView
+                        android:id="@+id/phong_text_gen2"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/phong_thue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/songuoi_text_gen2"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/songuoi_thue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/phong_text_gen2" />
+
+                    <TextView
+                        android:id="@+id/soxe_text_gen2"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/soxe_thue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/songuoi_text_gen2" />
+
+                    <TextView
+                        android:id="@+id/sotiencoc_text_gen2"
+                        style="@style/ValueText20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/sotiencoc_thue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/soxe_text_gen2" />
+
+                    <TextView
+                        android:id="@+id/phong_edit_gen2"
+                        style="@style/ValueText15sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@{generalViewModel.maPhongString}"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/phong_text_gen2"
+                        app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
+
+                    <EditText
+                        android:id="@+id/songuoi_edit_gen2"
+                        style="@style/EditTextStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:ems="10"
+                        android:hint="@string/hint"
+                        android:importantForAutofill="no"
+                        android:textSize="13sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/songuoi_text_gen2"
+                        app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
+
+                    <EditText
+                        android:id="@+id/soxe_edit_gen2"
+                        style="@style/EditTextStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:ems="10"
+                        android:hint="@string/hint"
+                        android:importantForAutofill="no"
+                        android:textSize="13sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/soxe_text_gen2"
+                        app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
+
+                    <EditText
+                        android:id="@+id/sotiencoc_edit_gen2"
+                        style="@style/EditTextStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:ems="10"
+                        android:hint="@string/hint"
+                        android:importantForAutofill="no"
+                        android:textSize="13sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/sotiencoc_text_gen2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/sotiencoc_text_gen2" />
+
+                    <Button
+                        android:id="@+id/button_xacnhan_gen3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:onClick="@{() -> generalViewModel.onXacNhanCN()}"
+                        android:text="@string/button_xacnhan"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toStartOf="@+id/button_huy_gen3"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sotiencoc_text_gen2" />
+
+                    <Button
+                        android:id="@+id/button_huy_gen3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:onClick="@{() -> generalViewModel.onHuy()}"
+                        android:text="@string/button_huy"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/button_xacnhan_gen3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/button_xacnhan_gen3" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RadioButton
+                    android:id="@+id/radio_tra_phong"
+                    style="@style/RadioStyle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:onClick="@{() -> generalViewModel.onXacNhanTP()}"
-                    android:text="@string/button_xacnhan"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/button_huy2"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
+                    android:layout_marginTop="12dp"
+                    android:onClick="@{() -> generalViewModel.radio2Checked()}"
+                    android:text="@string/tra_phong"
+                    android:textSize="23sp" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_tra_phong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{generalViewModel.layoutChecked2}">
 
-        </RadioGroup>
+                    <Button
+                        android:id="@+id/button_huy2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:onClick="@{() -> generalViewModel.onHuy()}"
+                        android:text="@string/button_huy"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/button_xacnhan2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/button_xacnhan2" />
+
+                    <Button
+                        android:id="@+id/button_xacnhan2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:onClick="@{() -> generalViewModel.onXacNhanTP()}"
+                        android:text="@string/button_xacnhan"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button_huy2"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RadioGroup>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

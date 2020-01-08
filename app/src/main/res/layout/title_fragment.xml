@@ -15,379 +15,389 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <RadioGroup
-            android:id="@+id/radio_gr"
+        <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <RadioButton
-                android:id="@+id/radio_1"
-                style="@style/RadioStyle"
-                android:layout_width="match_parent"
+            <RadioGroup
+                android:id="@+id/radio_gr"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="@{() -> titleViewModel.radio1Checked()}"
-                android:text="@string/tang_mot" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:id="@+id/layout_tang_1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_top16"
-                android:orientation="horizontal"
-                android:visibility="@{titleViewModel.layoutChecked1}"
-                tools:visibility="visible">
+                <RadioButton
+                    android:id="@+id/radio_1"
+                    style="@style/RadioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> titleViewModel.radio1Checked()}"
+                    android:text="@string/tang_mot" />
 
-                <Button
-                    android:id="@+id/button_tang_1_1"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p101State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p101State)}"
-                    android:text="@string/name_101" />
+                <LinearLayout
+                    android:id="@+id/layout_tang_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top16"
+                    android:orientation="horizontal"
+                    android:visibility="@{titleViewModel.layoutChecked1}"
+                    tools:visibility="visible">
 
-                <Button
-                    android:id="@+id/button_tang_1_2"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p102State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p102State)}"
-                    android:text="@string/name_102" />
+                    <Button
+                        android:id="@+id/button_tang_1_1"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p101State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p101State)}"
+                        android:text="@{titleViewModel.tong101String}" />
 
-                <Button
-                    android:id="@+id/button_tang_1_3"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p103State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p103State)}"
-                    android:text="@string/name_103"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_1_2"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p102State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p102State)}"
+                        android:text="@{titleViewModel.tong102String}" />
 
-
-                <Button
-                    android:id="@+id/button_tang_1_4"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p104State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p104State)}"
-                    android:text="@string/name_104"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_1_3"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p103State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p103State)}"
+                        android:text="@{titleViewModel.tong103String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_1_5"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p105State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p105State)}"
-                    android:text="@string/name_105"
-                    android:textColor="@color/Black" />
-
-            </LinearLayout>
-
-            <RadioButton
-                android:id="@+id/radio_2"
-                style="@style/RadioStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_start_32"
-                android:onClick="@{() -> titleViewModel.radio2Checked()}"
-                android:text="@string/tang_hai" />
-
-            <LinearLayout
-                android:id="@+id/layout_tang_2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_top16"
-                android:orientation="horizontal"
-                android:visibility="@{titleViewModel.layoutChecked2}"
-                tools:visibility="visible">
-
-                <Button
-                    android:id="@+id/button_tang_2_1"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p201State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p201State)}"
-                    android:text="@string/name_201"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_1_4"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p104State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p104State)}"
+                        android:text="@{titleViewModel.tong104String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_2_2"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p202State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p202State)}"
-                    android:text="@string/name_202"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_1_5"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p105State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p105State)}"
+                        android:text="@{titleViewModel.tong105String}"
+                        android:textColor="@color/Black" />
+
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radio_2"
+                    style="@style/RadioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_start_32"
+                    android:onClick="@{() -> titleViewModel.radio2Checked()}"
+                    android:text="@string/tang_hai" />
+
+                <LinearLayout
+                    android:id="@+id/layout_tang_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top16"
+                    android:orientation="horizontal"
+                    android:visibility="@{titleViewModel.layoutChecked2}"
+                    tools:visibility="visible">
+
+                    <Button
+                        android:id="@+id/button_tang_2_1"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p201State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p201State)}"
+                        android:text="@{titleViewModel.tong201String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_2_3"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p203State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p203State)}"
-                    android:text="@string/name_203"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_2_2"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p202State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p202State)}"
+                        android:text="@{titleViewModel.tong202String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_2_4"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p204State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p204State)}"
-                    android:text="@string/name_204"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_2_3"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p203State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p203State)}"
+                        android:text="@{titleViewModel.tong203String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_2_5"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p205State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p205State)}"
-                    android:text="@string/name_205"
-                    android:textColor="@color/Black" />
-
-            </LinearLayout>
-
-            <RadioButton
-                android:id="@+id/radio_3"
-                style="@style/RadioStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_start_32"
-                android:fontFamily="@font/roboto"
-                android:onClick="@{() -> titleViewModel.radio3Checked()}"
-                android:text="@string/tang_ba" />
-
-            <LinearLayout
-                android:id="@+id/layout_tang_3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_top16"
-                android:orientation="horizontal"
-                android:visibility="@{titleViewModel.layoutChecked3}"
-                tools:visibility="visible">
-
-                <Button
-                    android:id="@+id/button_tang_3_1"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p301State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p301State)}"
-                    android:text="@string/name_301"
-                    android:textColor="@color/Black" />
-
-                <Button
-                    android:id="@+id/button_tang_3_2"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p302State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p302State)}"
-                    android:text="@string/name_302"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_2_4"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p204State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p204State)}"
+                        android:text="@{titleViewModel.tong204String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_3_3"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p303State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p303State)}"
-                    android:text="@string/name_303"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_2_5"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p205State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p205State)}"
+                        android:text="@{titleViewModel.tong205String}"
+                        android:textColor="@color/Black" />
+
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radio_3"
+                    style="@style/RadioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_start_32"
+                    android:fontFamily="@font/roboto"
+                    android:onClick="@{() -> titleViewModel.radio3Checked()}"
+                    android:text="@string/tang_ba" />
+
+                <LinearLayout
+                    android:id="@+id/layout_tang_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top16"
+                    android:orientation="horizontal"
+                    android:visibility="@{titleViewModel.layoutChecked3}"
+                    tools:visibility="visible">
+
+                    <Button
+                        android:id="@+id/button_tang_3_1"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p301State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p301State)}"
+                        android:text="@{titleViewModel.tong301String}"
+                        android:textColor="@color/Black" />
+
+                    <Button
+                        android:id="@+id/button_tang_3_2"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p302State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p302State)}"
+                        android:text="@{titleViewModel.tong302String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_3_4"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p304State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p304State)}"
-                    android:text="@string/name_304"
-                    android:textColor="@color/Black" />
-
-                <Button
-                    android:id="@+id/button_tang_3_5"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p305State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p305State)}"
-                    android:text="@string/name_305"
-                    android:textColor="@color/Black" />
-
-            </LinearLayout>
-
-            <RadioButton
-                android:id="@+id/radio_4"
-                style="@style/RadioStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_start_32"
-                android:onClick="@{() -> titleViewModel.radio4Checked()}"
-                android:text="@string/tang_bon" />
-
-            <LinearLayout
-                android:id="@+id/layout_tang_4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_top16"
-                android:orientation="horizontal"
-                android:visibility="@{titleViewModel.layoutChecked4}"
-                tools:visibility="visible">
-
-                <Button
-                    android:id="@+id/button_tang_4_1"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p401State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p401State)}"
-                    android:text="@string/name_401"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_3_3"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p303State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p303State)}"
+                        android:text="@{titleViewModel.tong303String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_4_2"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p402State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p402State)}"
-                    android:text="@string/name_402"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_3_4"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p304State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p304State)}"
+                        android:text="@{titleViewModel.tong304String}"
+                        android:textColor="@color/Black" />
+
+                    <Button
+                        android:id="@+id/button_tang_3_5"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p305State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p305State)}"
+                        android:text="@{titleViewModel.tong305String}"
+                        android:textColor="@color/Black" />
+
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radio_4"
+                    style="@style/RadioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_start_32"
+                    android:onClick="@{() -> titleViewModel.radio4Checked()}"
+                    android:text="@string/tang_bon" />
+
+                <LinearLayout
+                    android:id="@+id/layout_tang_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top16"
+                    android:orientation="horizontal"
+                    android:visibility="@{titleViewModel.layoutChecked4}"
+                    tools:visibility="visible">
+
+                    <Button
+                        android:id="@+id/button_tang_4_1"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p401State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p401State)}"
+                        android:text="@{titleViewModel.tong401String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_4_3"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p403State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p403State)}"
-                    android:text="@string/name_403"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_4_2"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p402State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p402State)}"
+                        android:text="@{titleViewModel.tong402String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_4_4"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p404State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p404State)}"
-                    android:text="@string/name_404"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_4_3"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p403State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p403State)}"
+                        android:text="@{titleViewModel.tong403String}"
+                        android:textColor="@color/Black" />
 
 
-                <Button
-                    android:id="@+id/button_tang_4_5"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p405State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p405State)}"
-                    android:text="@string/name_405"
-                    android:textColor="@color/Black" />
+                    <Button
+                        android:id="@+id/button_tang_4_4"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p404State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p404State)}"
+                        android:text="@{titleViewModel.tong404tring}"
+                        android:textColor="@color/Black" />
 
-            </LinearLayout>
 
-            <RadioButton
-                android:id="@+id/radio_5"
-                style="@style/RadioStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_start_32"
-                android:onClick="@{() -> titleViewModel.radio5Checked()}"
-                android:text="@string/tang_nam" />
+                    <Button
+                        android:id="@+id/button_tang_4_5"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p405State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p405State)}"
+                        android:text="@{titleViewModel.tong405String}"
+                        android:textColor="@color/Black" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_tang_5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_top16"
-                android:orientation="horizontal"
-                android:visibility="@{titleViewModel.layoutChecked5}"
-                tools:visibility="visible">
+                </LinearLayout>
 
-                <Button
-                    android:id="@+id/button_tang_5_1"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:layout_marginStart="64dp"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p501State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p501State)}"
-                    android:text="@string/name_501"
-                    android:textColor="@color/Black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/button_tang_5_2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <RadioButton
+                    android:id="@+id/radio_5"
+                    style="@style/RadioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_start_32"
+                    android:onClick="@{() -> titleViewModel.radio5Checked()}"
+                    android:text="@string/tang_nam" />
 
-                <Button
-                    android:id="@+id/button_tang_5_2"
-                    style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="@dimen/button_room_width"
-                    android:layout_height="@dimen/button_room_height"
-                    android:layout_marginEnd="64dp"
-                    android:background="@{titleViewModel.mapColor(titleViewModel.p502State)}"
-                    android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
-                    android:tag="@{titleViewModel.mapTag(titleViewModel.p502State)}"
-                    android:text="@string/name_502"
-                    android:textColor="@color/Black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/button_tang_5_1"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_tang_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top16"
+                    android:orientation="horizontal"
+                    android:visibility="@{titleViewModel.layoutChecked5}"
+                    tools:visibility="visible">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </RadioGroup>
+                    <Button
+                        android:id="@+id/button_tang_5_1"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:layout_marginStart="64dp"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p501State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p501State)}"
+                        android:text="@{titleViewModel.tong501String}"
+                        android:textColor="@color/Black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button_tang_5_2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
+                    <Button
+                        android:id="@+id/button_tang_5_2"
+                        style="@style/TextAppearance.AppCompat.Button"
+                        android:layout_width="@dimen/button_room_width"
+                        android:layout_height="@dimen/button_room_height"
+                        android:layout_marginEnd="64dp"
+                        android:background="@{titleViewModel.mapColor(titleViewModel.p502State)}"
+                        android:onClick="@{(View) -> titleViewModel.onEventButton(View)}"
+                        android:tag="@{titleViewModel.mapTag(titleViewModel.p502State)}"
+                        android:text="@{titleViewModel.tong502String}"
+                        android:textColor="@color/Black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/button_tang_5_1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RadioGroup>
+        </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
